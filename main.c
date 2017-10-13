@@ -50,9 +50,12 @@ void				set_dist_room(int dist, t_room *room)
 
 	i = 0;
 	while (i < room->liason)
-	{
-		if (room->room_linked[i]->dist < dist)
+	{	
+		if ((room->room_linked[i]->dist > dist ||
+			room->room_linked[i]->dist == 0))
+		{
 			room->room_linked[i]->dist = dist;
+		}
 		i++;
 	}
 	i = 0;
@@ -60,6 +63,7 @@ void				set_dist_room(int dist, t_room *room)
 	{
 		if (room->room_linked[i]->dist == dist)
 			set_dist_room(dist + 1, room->room_linked[i]);
+		i++;
 	}
 }
 
@@ -163,6 +167,59 @@ t_link				*gen_link1(char *name1, char *name2, t_list **addr)
 	return (link);
 }
 
+void				count_link_for_room(t_list **rooms, t_link **link)
+{
+	t_link			*l;
+	t_list			*lst;
+	t_room			*room;
+
+	lst = *rooms;
+	while (lst)
+	{
+		room = (t_room *)lst->content;
+		l = *link;
+		while (l)
+		{
+			if (ft_strcmp(room->name, l->one->name) == 0 || ft_strcmp(room->name, l->two->name) == 0)
+				room->liason = room->liason + 1;
+			l = l->next;
+		}
+		lst = lst->next;
+	}
+}
+
+void				generate_room_array(t_list **rooms, t_link **link)
+{
+	t_link			*l;
+	t_list			*lst;
+	t_room			*room;
+	int				i;
+
+	lst = *rooms;
+	while (lst)
+	{
+		room = (t_room *)lst->content;
+		if (room->liason > 0)
+		{
+			room->room_linked = (t_room **)ft_malloc(sizeof(t_room *) * room->liason);
+			i = 0;
+			l = *link;
+			while (l)
+			{
+				if (ft_strcmp(room->name, l->one->name) == 0 || ft_strcmp(room->name, l->two->name) == 0)
+				{
+					room->room_linked[i] = (t_room *)ft_malloc(sizeof(t_room));
+					room->room_linked[i++] = (ft_strcmp(room->name, l->one->name) != 0) ? l->one : l->two;
+					//printf("room %s have now on room_linked[%d] %s\n", room->name, i, room->linked[i]->name);
+				}
+				l = l->next;
+			}
+		}
+		lst = lst->next;
+
+	}
+}
+
 int					main(void)
 {
 	t_room			*lst;
@@ -204,7 +261,12 @@ int					main(void)
 	ft_push_back_link_lst(&link, &test, "end", "005");
 	ft_push_back_link_lst(&link, &test, "005", "011");
 	ft_push_back_link_lst(&link, &test, "end", "start");
+
+	count_link_for_room(&test, &link);
+	generate_room_array(&test, &link);
+
 	calc_dist_from_room(&test);
+
 	test2 = test;
 	cpy = link;
 

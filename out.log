@@ -1,0 +1,28 @@
+room 1 [end] dist from end 0
+room 2 [start] dist from end 0
+room 3 [001] dist from end 0
+room 4 [002] dist from end 0
+room 5 [003] dist from end 0
+room 6 [004] dist from end 0
+room 7 [005] dist from end 0
+room 8 [006] dist from end 0
+room 9 [007] dist from end 0
+room 10 [008] dist from end 0
+room 11 [009] dist from end 0
+room 12 [010] dist from end 0
+room 13 [011] dist from end 0
+room 001 ==> 002 linked
+room 002 ==> 003 linked
+room 003 ==> 004 linked
+room 004 ==> 005 linked
+room 005 ==> 006 linked
+room 006 ==> 007 linked
+room 007 ==> 008 linked
+room 008 ==> 009 linked
+room 009 ==> 010 linked
+room 010 ==> 011 linked
+room start ==> 011 linked
+room end ==> 001 linked
+room end ==> 005 linked
+room 005 ==> 011 linked
+room end ==> start linked
