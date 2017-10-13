@@ -76,6 +76,8 @@ void				calc_dist_from_room(t_list **mem)
 	{
 		if (((t_room *)(list->content))->is_end == 1)
 			set_dist_room(1, list->content);
+		if (((t_room *)(list->content))->is_end == 1)
+			((t_room *)(list->content))->dist = 0;
 		list = list->next;
 	}
 }
@@ -210,7 +212,6 @@ void				generate_room_array(t_list **rooms, t_link **link)
 				{
 					room->room_linked[i] = (t_room *)ft_malloc(sizeof(t_room));
 					room->room_linked[i++] = (ft_strcmp(room->name, l->one->name) != 0) ? l->one : l->two;
-					//printf("room %s have now on room_linked[%d] %s\n", room->name, i, room->linked[i]->name);
 				}
 				l = l->next;
 			}
