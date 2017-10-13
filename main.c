@@ -57,9 +57,7 @@ t_room				*create_new_room(char *name)
 {
 	t_room			*ret;
 
-	printf("Try malloc room\n");
 	ret = (t_room *)ft_malloc(sizeof(t_room));
-	printf("Try malloc room name\n");
 	ret->name = ft_strdup(name);
 	ret->dist = 0;
 	ret->liason = 0;
@@ -67,6 +65,30 @@ t_room				*create_new_room(char *name)
 	ret->is_start = 0;
 	ret->is_end = 0;
 	return (ret);
+}
+
+t_list				*ft_create_lst_room(t_room *room)
+{
+	t_list			*lst;
+
+	lst = (t_list *)ft_malloc(sizeof(t_list));
+	lst->content = (t_room *)ft_malloc(sizeof(t_room));
+	lst->content = room;
+	lst->next = NULL;
+	return (lst);
+}
+
+void				ft_push_back_room_lst(t_list **addr, t_room *room)
+{
+	t_list			*lst;
+
+	lst = *addr;
+	while (lst->next)
+		lst = lst->next;
+	if (lst)
+		lst->next = ft_create_lst_room(room);
+	else
+		lst = ft_create_lst_room(room);
 }
 
 int					main(void)
@@ -77,28 +99,26 @@ int					main(void)
 	t_list			*test2;
 
 	lst = create_new_room("end");
-	printf("malloc 1 done!\n");
 	lst2 = create_new_room("start");
-	printf("malloc 2 done!\n");
-	test = (t_list *)malloc(sizeof(t_list));
-	if (test)
-	{
-		test->content = (t_room *)malloc(sizeof(t_room));
-		test->content = lst;
-		test->next = (t_list *)malloc(sizeof(t_list));
-		if (test->next)
-		{
-			test->next->content = (t_room *)malloc(sizeof(t_room));
-			test->next->content = lst2;
-			test->next->next = NULL;
-		}
-	}
+	test = ft_create_lst_room(lst);
+	ft_push_back_room_lst(&test, lst2);
+	ft_push_back_room_lst(&test, create_new_room("001"));
+	ft_push_back_room_lst(&test, create_new_room("002"));
+	ft_push_back_room_lst(&test, create_new_room("003"));
+	ft_push_back_room_lst(&test, create_new_room("004"));
+	ft_push_back_room_lst(&test, create_new_room("005"));
+	ft_push_back_room_lst(&test, create_new_room("006"));
+	ft_push_back_room_lst(&test, create_new_room("007"));
+	ft_push_back_room_lst(&test, create_new_room("008"));
+	ft_push_back_room_lst(&test, create_new_room("009"));
+	ft_push_back_room_lst(&test, create_new_room("010"));
+	ft_push_back_room_lst(&test, create_new_room("011"));
 	test2 = test;
 	int	id;
 	id = 0;
 	while (test2)
 	{
-		printf("room %d [%s]\n", id++, ((t_room *)test2->content)->name);
+		printf("room %d [%s]\n", ++id, ((t_room *)test2->content)->name);
 		test2 = test2->next;
 	}
 }
