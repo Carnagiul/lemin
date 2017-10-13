@@ -57,28 +57,48 @@ t_room				*create_new_room(char *name)
 {
 	t_room			*ret;
 
-	ret = (t_room *)ft_memalloc(sizeof(t_room));
+	printf("Try malloc room\n");
+	ret = (t_room *)ft_malloc(sizeof(t_room));
+	printf("Try malloc room name\n");
 	ret->name = ft_strdup(name);
+	ret->dist = 0;
+	ret->liason = 0;
+	ret->occuped = 0;
+	ret->is_start = 0;
+	ret->is_end = 0;
 	return (ret);
 }
 
 int					main(void)
 {
-	t_list			*lst;
-	t_list			**mem;
-	t_room			*ptr;
+	t_room			*lst;
+	t_room			*lst2;
+	t_list			*test;
+	t_list			*test2;
 
-	lst = NULL;
-	mem = &lst;
-	ft_list_push_back(mem, create_new_room("end"), sizeof(t_room));
-	ft_list_push_back(mem, create_new_room("start"), sizeof(t_room));
-//	ft_list_push_back(mem, create_new_room("room_1_01"), sizeof(t_room));
-//	ft_list_push_back(mem, create_new_room("room_2_02"), sizeof(t_room));
-	lst = *mem;
-	while (lst)
+	lst = create_new_room("end");
+	printf("malloc 1 done!\n");
+	lst2 = create_new_room("start");
+	printf("malloc 2 done!\n");
+	test = (t_list *)malloc(sizeof(t_list));
+	if (test)
 	{
-		ptr = (t_room *)lst->content;
-		printf("%s\n", ptr->name);
-		lst = lst->next;
+		test->content = (t_room *)malloc(sizeof(t_room));
+		test->content = lst;
+		test->next = (t_list *)malloc(sizeof(t_list));
+		if (test->next)
+		{
+			test->next->content = (t_room *)malloc(sizeof(t_room));
+			test->next->content = lst2;
+			test->next->next = NULL;
+		}
+	}
+	test2 = test;
+	int	id;
+	id = 0;
+	while (test2)
+	{
+		printf("room %d [%s]\n", id++, ((t_room *)test2->content)->name);
+		test2 = test2->next;
 	}
 }
