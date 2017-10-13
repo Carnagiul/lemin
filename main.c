@@ -115,6 +115,8 @@ void				ft_push_back_link_lst(t_link **addr, t_list **rooms, char *name1, char *
 	two = get_room(rooms, name2);
 	if (ft_strcmp(name1, name2) == 0)
 		return ;
+	if (!one || !two)
+		return ;
 	if (link)
 		link->next = create_new_link(one, two);
 	else		
