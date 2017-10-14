@@ -227,36 +227,6 @@ void				generate_room_array(t_list **rooms, t_link **link)
 	}
 }
 
-void				move_toward_end(t_list *lst)
-{
-	t_room			*room;
-	int				i;
-
-	i = 0;
-	room = (t_room *)lst->content;
-	if (room->is_end == 1 || room->is_start == 1)
-		return ;
-	if (room->occuped >= 1)
-	{
-		while (i < room->liason)
-		{
-			if (room->room_linked[i]->dist < room->dist)
-			{
-				if ((room->room_linked[i]->occuped == 0 ||
-					room->room_linked[i]->is_end) &&
-					room->moved == 0)
-					{
-						room->room_linked[i]->occuped = room->room_linked[i]->occuped + 1;
-						room->occuped = room->occuped - 1;
-						room->moved = 1;
-						ft_printf("MOVE 1: 1 ants move from %s to %s\n", room->name, room->room_linked[i]->name);
-					}
-			}
-			i++;
-		}
-	}
-}
-
 int					after_is_better(t_room *room, int i)
 {
 	int				cpy;
@@ -403,7 +373,7 @@ int					main(void)
 
 	calc_dist_from_room(&test);
 
-	lst2->occuped = 100;
+	lst2->occuped = 4;
 	int ants;
 	int	i;
 
