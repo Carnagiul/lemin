@@ -336,16 +336,6 @@ void				move_ants(t_list **lst)
 		room->moved = 0;
 		one = one->next;
 	}
-	while (one)
-	{
-		two = *lst;
-		while (two)
-		{
-			move_toward_end(two);
-			two = two->next;
-		}
-		one = one->next;
-	}
 	one = *lst;
 	while (one)
 	{
@@ -417,33 +407,14 @@ int					main(void)
 	int ants;
 	int	i;
 
-	i = 0;
+	i = 1;
 	ants = lst2->occuped;
 	while (lst->occuped != ants)
 	{
 		ft_printf("Tour %d : \n", i);
 		move_ants(&test);
 		ft_printf("\nFin du tour %d\n\n", i);
-
 		i++;
 	}
-	printf("start == %d || end == %d || i == %d\n", lst2->occuped, lst->occuped, i);
-
-	/*
-	test2 = test;
-	cpy = link;
-
-	int	id;
-	id = 0;
-	while (test2)
-	{
-		printf("room %d [%s] dist from end %d\n", ++id, ((t_room *)test2->content)->name, ((t_room *)test2->content)->dist);
-		test2 = test2->next;
-	}
-	while (cpy)
-	{
-		printf("room %s ==> %s linked\n", cpy->one->name, cpy->two->name);
-		cpy = cpy->next;
-	}
-	*/
+	printf("start == %d || end == %d || i == %d\n", lst2->occuped, lst->occuped, i - 1);
 }

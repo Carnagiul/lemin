@@ -1,18 +1,5 @@
-Tour 0 : 
-MOVE 2: 1 ants move from start to end
-MOVE 2: 1 ants move from start to 001
-MOVE 2: 1 ants move from start to 002
-MOVE 2: 1 ants move from start to 003
-MOVE 2: 1 ants move from start to 004
-
-Fin du tour 0
-
 Tour 1 : 
 MOVE 2: 1 ants move from start to end
-MOVE 2: 1 ants move from 001 to end
-MOVE 2: 1 ants move from 002 to end
-MOVE 2: 1 ants move from 003 to end
-MOVE 2: 1 ants move from 004 to end
 MOVE 2: 1 ants move from start to 001
 MOVE 2: 1 ants move from start to 002
 MOVE 2: 1 ants move from start to 003
@@ -255,11 +242,24 @@ MOVE 2: 1 ants move from start to 004
 Fin du tour 19
 
 Tour 20 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 20
+
+Tour 21 : 
 MOVE 2: 1 ants move from 001 to end
 MOVE 2: 1 ants move from 002 to end
 MOVE 2: 1 ants move from 003 to end
 MOVE 2: 1 ants move from 004 to end
 
-Fin du tour 20
+Fin du tour 21
 
-start == 0 || end == 100 || i == 21
+start == 0 || end == 100 || i == 22
