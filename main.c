@@ -262,6 +262,13 @@ int					main(void)
 	ft_push_back_link_lst(&link, &test, "end", "005");
 	ft_push_back_link_lst(&link, &test, "005", "011");
 	ft_push_back_link_lst(&link, &test, "end", "start");
+	ft_push_back_link_lst(&link, &test, "end", "002");
+	ft_push_back_link_lst(&link, &test, "end", "003");
+	ft_push_back_link_lst(&link, &test, "end", "004");
+	ft_push_back_link_lst(&link, &test, "start", "001");
+	ft_push_back_link_lst(&link, &test, "start", "002");
+	ft_push_back_link_lst(&link, &test, "start", "003");
+	ft_push_back_link_lst(&link, &test, "start", "004");
 
 	count_link_for_room(&test, &link);
 	generate_room_array(&test, &link);
