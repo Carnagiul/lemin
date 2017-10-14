@@ -1,28 +1,265 @@
-room 1 [end] dist from end 0
-room 2 [start] dist from end 0
-room 3 [001] dist from end 0
-room 4 [002] dist from end 0
-room 5 [003] dist from end 0
-room 6 [004] dist from end 0
-room 7 [005] dist from end 0
-room 8 [006] dist from end 0
-room 9 [007] dist from end 0
-room 10 [008] dist from end 0
-room 11 [009] dist from end 0
-room 12 [010] dist from end 0
-room 13 [011] dist from end 0
-room 001 ==> 002 linked
-room 002 ==> 003 linked
-room 003 ==> 004 linked
-room 004 ==> 005 linked
-room 005 ==> 006 linked
-room 006 ==> 007 linked
-room 007 ==> 008 linked
-room 008 ==> 009 linked
-room 009 ==> 010 linked
-room 010 ==> 011 linked
-room start ==> 011 linked
-room end ==> 001 linked
-room end ==> 005 linked
-room 005 ==> 011 linked
-room end ==> start linked
+Tour 0 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 0
+
+Tour 1 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 1
+
+Tour 2 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 2
+
+Tour 3 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 3
+
+Tour 4 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 4
+
+Tour 5 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 5
+
+Tour 6 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 6
+
+Tour 7 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 7
+
+Tour 8 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 8
+
+Tour 9 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 9
+
+Tour 10 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 10
+
+Tour 11 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 11
+
+Tour 12 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 12
+
+Tour 13 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 13
+
+Tour 14 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 14
+
+Tour 15 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 15
+
+Tour 16 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 16
+
+Tour 17 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 17
+
+Tour 18 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 18
+
+Tour 19 : 
+MOVE 2: 1 ants move from start to end
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+MOVE 2: 1 ants move from start to 001
+MOVE 2: 1 ants move from start to 002
+MOVE 2: 1 ants move from start to 003
+MOVE 2: 1 ants move from start to 004
+
+Fin du tour 19
+
+Tour 20 : 
+MOVE 2: 1 ants move from 001 to end
+MOVE 2: 1 ants move from 002 to end
+MOVE 2: 1 ants move from 003 to end
+MOVE 2: 1 ants move from 004 to end
+
+Fin du tour 20
+
+start == 0 || end == 100 || i == 21

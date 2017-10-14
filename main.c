@@ -6,6 +6,8 @@ typedef struct		s_room
 	int				liason;
 	int				occuped;
 	struct s_room	**room_linked;
+	int				*room_moved;
+	int				moved;
 	int				is_start;
 	int				is_end;
 	char			*name;
@@ -94,6 +96,8 @@ t_room				*create_new_room(char *name)
 	ret->is_start = 0;
 	ret->is_end = 0;
 	ret->room_linked = NULL;
+	ret->room_moved = NULL;
+	ret->moved = 0;
 	return (ret);
 }
 
@@ -204,6 +208,7 @@ void				generate_room_array(t_list **rooms, t_link **link)
 		if (room->liason > 0)
 		{
 			room->room_linked = (t_room **)ft_malloc(sizeof(t_room *) * room->liason);
+			room->room_moved = (int *)ft_malloc(sizeof(int ) * room->liason);
 			i = 0;
 			l = *link;
 			while (l)
@@ -211,6 +216,7 @@ void				generate_room_array(t_list **rooms, t_link **link)
 				if (ft_strcmp(room->name, l->one->name) == 0 || ft_strcmp(room->name, l->two->name) == 0)
 				{
 					room->room_linked[i] = (t_room *)ft_malloc(sizeof(t_room));
+					room->room_moved[i] = 0;
 					room->room_linked[i++] = (ft_strcmp(room->name, l->one->name) != 0) ? l->one : l->two;
 				}
 				l = l->next;
@@ -221,14 +227,146 @@ void				generate_room_array(t_list **rooms, t_link **link)
 	}
 }
 
+void				move_toward_end(t_list *lst)
+{
+	t_room			*room;
+	int				i;
+
+	i = 0;
+	room = (t_room *)lst->content;
+	if (room->is_end == 1 || room->is_start == 1)
+		return ;
+	if (room->occuped >= 1)
+	{
+		while (i < room->liason)
+		{
+			if (room->room_linked[i]->dist < room->dist)
+			{
+				if ((room->room_linked[i]->occuped == 0 ||
+					room->room_linked[i]->is_end) &&
+					room->moved == 0)
+					{
+						room->room_linked[i]->occuped = room->room_linked[i]->occuped + 1;
+						room->occuped = room->occuped - 1;
+						room->moved = 1;
+						ft_printf("MOVE 1: 1 ants move from %s to %s\n", room->name, room->room_linked[i]->name);
+					}
+			}
+			i++;
+		}
+	}
+}
+
+int					after_is_better(t_room *room, int i)
+{
+	int				cpy;
+
+	cpy = i;
+	i++;
+	while (i < room->liason)
+	{
+			if (room->room_linked[i]->dist < room->room_linked[cpy]->dist)
+			{
+				if ((room->room_linked[i]->occuped == 0 ||
+					room->room_linked[i]->is_end == 1) &&
+					(room->moved == 0 && room->room_moved[i] == 0) &&
+					room->room_linked[i]->is_start == 0 &&
+					room->occuped >= 1
+					)
+					{
+						return (1);
+					}
+			}
+			i++;
+	}
+	return (0);
+}
+
+void				move_toward_end2(t_list *lst)
+{
+	t_room			*room;
+	int				i;
+
+	i = 0;
+	room = (t_room *)lst->content;
+	if (room->is_end == 1)
+		return ;
+	if (room->occuped >= 1)
+	{
+		while (i < room->liason)
+		{
+			if (room->room_linked[i]->dist <= room->dist)
+			{
+				if ((room->room_linked[i]->occuped == 0 ||
+					room->room_linked[i]->is_end == 1) &&
+					(room->moved == 0 && room->room_moved[i] == 0) &&
+					room->room_linked[i]->is_start == 0 &&
+					room->occuped >= 1 && after_is_better(room, i) == 0
+					)
+					{
+						room->room_linked[i]->occuped = room->room_linked[i]->occuped + 1;
+						room->room_linked[i]->moved = 1;
+						room->room_moved[i] = 1;
+						room->occuped = room->occuped - 1;
+						if (room->is_start == 0)
+							room->moved = 1;		
+						if (room->is_start == 0)
+							room->moved = 1;						
+						ft_printf("MOVE 2: 1 ants move from %s to %s\n", room->name, room->room_linked[i]->name);
+					}
+			}
+			i++;
+		}
+	}
+}
+
+void				move_ants(t_list **lst)
+{
+	t_list			*one;
+	t_list			*two;
+	t_room			*room;
+
+	one = *lst;
+	while (one)
+	{
+		room = ((t_room *)one->content);
+		room->moved = 0;
+		while (room->moved < room->liason)
+			room->room_moved[room->moved++] = 0;
+		room->moved = 0;
+		one = one->next;
+	}
+	while (one)
+	{
+		two = *lst;
+		while (two)
+		{
+			move_toward_end(two);
+			two = two->next;
+		}
+		one = one->next;
+	}
+	one = *lst;
+	while (one)
+	{
+		two = *lst;
+		while (two)
+		{
+			move_toward_end2(two);
+			two = two->next;
+		}
+		one = one->next;
+	}
+}
+
 int					main(void)
 {
 	t_room			*lst;
 	t_room			*lst2;
 	t_list			*test;
-	t_list			*test2;
+	//t_list			*test2;
 	t_link			*link;
-	t_link			*cpy;
+	//t_link			*cpy;
 
 	lst = create_new_room("end");
 	lst->is_end = 1;
@@ -275,6 +413,23 @@ int					main(void)
 
 	calc_dist_from_room(&test);
 
+	lst2->occuped = 100;
+	int ants;
+	int	i;
+
+	i = 0;
+	ants = lst2->occuped;
+	while (lst->occuped != ants)
+	{
+		ft_printf("Tour %d : \n", i);
+		move_ants(&test);
+		ft_printf("\nFin du tour %d\n\n", i);
+
+		i++;
+	}
+	printf("start == %d || end == %d || i == %d\n", lst2->occuped, lst->occuped, i);
+
+	/*
 	test2 = test;
 	cpy = link;
 
@@ -290,4 +445,5 @@ int					main(void)
 		printf("room %s ==> %s linked\n", cpy->one->name, cpy->two->name);
 		cpy = cpy->next;
 	}
+	*/
 }
