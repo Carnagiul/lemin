@@ -1,5 +1,12 @@
 #include "libft.h"
 
+void	exit_error(void);
+
+void	exit_error(void)
+{
+	printf("MAKAKA\n");
+}
+
 typedef struct		s_room
 {
 	int				dist;
@@ -52,7 +59,7 @@ void				set_dist_room(int dist, t_room *room)
 
 	i = 0;
 	while (i < room->liason)
-	{	
+	{
 		if ((room->room_linked[i]->dist > dist ||
 			room->room_linked[i]->dist == 0))
 		{
@@ -80,6 +87,13 @@ void				calc_dist_from_room(t_list **mem)
 			set_dist_room(1, list->content);
 		if (((t_room *)(list->content))->is_end == 1)
 			((t_room *)(list->content))->dist = 0;
+		list = list->next;
+	}
+	list = *mem;
+	while (list)
+	{
+		if (((t_room *)list->content)->is_start == 1 && ((t_room *)list->content)->dist == 0)
+			exit(0);
 		list = list->next;
 	}
 }
@@ -129,7 +143,7 @@ void				ft_push_back_link_lst(t_link **addr, t_list **rooms, char *name1, char *
 		return ;
 	if (link)
 		link->next = create_new_link(one, two);
-	else		
+	else
 		link = create_new_link(one, two);
 }
 
@@ -190,6 +204,8 @@ void				count_link_for_room(t_list **rooms, t_link **link)
 				room->liason = room->liason + 1;
 			l = l->next;
 		}
+		if ((room->is_start == 1 || room->is_end == 1) && (room->liason == 0))
+			exit(0);
 		lst = lst->next;
 	}
 }
@@ -279,9 +295,9 @@ void				move_toward_end2(t_list *lst)
 						room->room_moved[i] = 1;
 						room->occuped = room->occuped - 1;
 						if (room->is_start == 0)
-							room->moved = 1;		
+							room->moved = 1;
 						if (room->is_start == 0)
-							room->moved = 1;						
+							room->moved = 1;
 						ft_printf("MOVE 2: 1 ants move from %s to %s\n", room->name, room->room_linked[i]->name);
 					}
 			}
@@ -328,6 +344,7 @@ int					main(void)
 	t_link			*link;
 	//t_link			*cpy;
 
+	atexit(&exit_error);
 	lst = create_new_room("end");
 	lst->is_end = 1;
 	lst2 = create_new_room("start");
@@ -346,28 +363,27 @@ int					main(void)
 	ft_push_back_room_lst(&test, create_new_room("010"));
 	ft_push_back_room_lst(&test, create_new_room("011"));
 	link = gen_link1("001", "002", &test);
-	ft_push_back_link_lst(&link, &test, "002", "003");
-	ft_push_back_link_lst(&link, &test, "003", "004");
-	ft_push_back_link_lst(&link, &test, "004", "005");
-	ft_push_back_link_lst(&link, &test, "005", "006");
-	ft_push_back_link_lst(&link, &test, "006", "007");
-	ft_push_back_link_lst(&link, &test, "007", "008");
-	ft_push_back_link_lst(&link, &test, "008", "009");
-	ft_push_back_link_lst(&link, &test, "009", "010");
-	ft_push_back_link_lst(&link, &test, "010", "011");
-	ft_push_back_link_lst(&link, &test, "start", "011");
-	ft_push_back_link_lst(&link, &test, "end", "001");
+	//ft_push_back_link_lst(&link, &test, "002", "003");
+	//ft_push_back_link_lst(&link, &test, "003", "004");
+	//ft_push_back_link_lst(&link, &test, "004", "005");
+	//ft_push_back_link_lst(&link, &test, "005", "006");
+	//ft_push_back_link_lst(&link, &test, "006", "007");
+	//ft_push_back_link_lst(&link, &test, "007", "008");
+	//ft_push_back_link_lst(&link, &test, "008", "009");
+	//ft_push_back_link_lst(&link, &test, "009", "010");
+	//ft_push_back_link_lst(&link, &test, "010", "011");
+	//ft_push_back_link_lst(&link, &test, "start", "011");
+	//ft_push_back_link_lst(&link, &test, "end", "001");
 	ft_push_back_link_lst(&link, &test, "end", "005");
-	ft_push_back_link_lst(&link, &test, "005", "011");
-	ft_push_back_link_lst(&link, &test, "end", "start");
-	ft_push_back_link_lst(&link, &test, "end", "002");
-	ft_push_back_link_lst(&link, &test, "end", "003");
-	ft_push_back_link_lst(&link, &test, "end", "004");
+	//ft_push_back_link_lst(&link, &test, "005", "011");
+	//ft_push_back_link_lst(&link, &test, "end", "start");
+	//ft_push_back_link_lst(&link, &test, "end", "002");
+	//ft_push_back_link_lst(&link, &test, "end", "003");
+	//ft_push_back_link_lst(&link, &test, "end", "004");
 	ft_push_back_link_lst(&link, &test, "start", "001");
-	ft_push_back_link_lst(&link, &test, "start", "002");
-	ft_push_back_link_lst(&link, &test, "start", "003");
-	ft_push_back_link_lst(&link, &test, "start", "004");
-
+	//ft_push_back_link_lst(&link, &test, "start", "002");
+	//ft_push_back_link_lst(&link, &test, "start", "003");
+	//ft_push_back_link_lst(&link, &test, "start", "004");
 	count_link_for_room(&test, &link);
 	generate_room_array(&test, &link);
 
