@@ -17,7 +17,7 @@ char		*ft_get_content_file_fd(int fd)
 	char	*content;
 	char	*gnl;
 
-	if (fd >= 1)
+	if (fd >= 0)
 	{
 		content = ft_strnew(1);
 		while (get_next_line(fd, &gnl) == 1)

@@ -27,6 +27,17 @@ typedef struct		s_link
 	struct s_link	*next;
 }					t_link;
 
+typedef struct		s_lemin
+{
+	t_room			*start;
+	t_room			*end;
+	t_list			*list_room;
+	t_link			*link;
+	char			*ret_file;
+	char			***split_ret;
+	int				nb_ants;
+}					t_lemin;
+
 void	*ft_malloc(size_t size)
 {
 	void	*ret;
@@ -335,16 +346,47 @@ void				move_ants(t_list **lst)
 	}
 }
 
+void				read_file(void)
+{
+	char			*ret;
+	int				i;
+	char			***split;
+	char			**ret_split;
+	int				k;
+
+	ret = ft_get_content_file_fd(0);
+	if (ret == NULL)
+		exit(1);
+	i = 0;
+	ret_split = ft_strsplit(ret, '\n');
+	while (ret_split[i])
+		i++;
+	k = i;
+	split = (char ***)malloc(sizeof(char **) * i);
+	i = 0;
+	while (ret_split[i])
+	{
+		split[i] = ft_strsplit(ret_split[i], ' ');
+		i++;
+	}
+	for (int i = 0; i < k;i++)
+	{
+		for (int j = 0;split[i][j]; j++)
+			printf("%s ", split[i][j]);
+		printf("\n");
+	}
+}
+
 int					main(void)
 {
 	t_room			*lst;
 	t_room			*lst2;
 	t_list			*test;
-	//t_list			*test2;
 	t_link			*link;
-	//t_link			*cpy;
 
+	//printf("FILE CONTENT == \n\n%s\n", ft_get_content_file_fd(0));
 	atexit(&exit_error);
+	read_file();
 	lst = create_new_room("end");
 	lst->is_end = 1;
 	lst2 = create_new_room("start");
