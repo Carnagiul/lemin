@@ -346,6 +346,25 @@ void				move_ants(t_list **lst)
 	}
 }
 
+void	count_nb_ants(int k, char ***split, int nbr)
+{
+	for (int i=0; i < k; i++)
+	{
+		if (!(split[i][0][0] == '#'))
+		{
+			nbr = ft_atoi(split[i][0]);
+			if (ft_strstr(ft_itoa(nbr), split[i][0]))
+			{
+				printf("GG %d\n", nbr);
+				return ;
+			}
+			else
+				exit(0);
+		}
+	}
+}
+
+
 void				read_file(void)
 {
 	char			*ret;
@@ -353,6 +372,8 @@ void				read_file(void)
 	char			***split;
 	char			**ret_split;
 	int				k;
+	int				nbr;
+	int				j;
 
 	ret = ft_get_content_file_fd(0);
 	if (ret == NULL)
@@ -371,10 +392,26 @@ void				read_file(void)
 	}
 	for (int i = 0; i < k;i++)
 	{
-		for (int j = 0;split[i][j]; j++)
-			printf("%s ", split[i][j]);
-		printf("\n");
+		nbr = 1;
+		if (split[i][0][0] == '#')
+			nbr = 0;
+		if (nbr == 1)
+		{
+			for (j = 0;split[i][j]; j++)
+				;
+			if (j > 3)
+			{
+				printf("\nRoom Name ==");
+				for (j = 0;split[i][j + 2]; j++)
+					printf(" %s", split[i][j]);
+				printf("\nRoom Coord ==");
+				for (j = j - 2;split[i][j]; j++)
+					printf(" %s", split[i][j]);
+				printf("\n\n");
+			}
+		}
 	}
+	count_nb_ants(k, split, 0);
 }
 
 int					main(void)
@@ -384,7 +421,6 @@ int					main(void)
 	t_list			*test;
 	t_link			*link;
 
-	//printf("FILE CONTENT == \n\n%s\n", ft_get_content_file_fd(0));
 	atexit(&exit_error);
 	read_file();
 	lst = create_new_room("end");
@@ -405,27 +441,27 @@ int					main(void)
 	ft_push_back_room_lst(&test, create_new_room("010"));
 	ft_push_back_room_lst(&test, create_new_room("011"));
 	link = gen_link1("001", "002", &test);
-	//ft_push_back_link_lst(&link, &test, "002", "003");
-	//ft_push_back_link_lst(&link, &test, "003", "004");
-	//ft_push_back_link_lst(&link, &test, "004", "005");
-	//ft_push_back_link_lst(&link, &test, "005", "006");
-	//ft_push_back_link_lst(&link, &test, "006", "007");
-	//ft_push_back_link_lst(&link, &test, "007", "008");
-	//ft_push_back_link_lst(&link, &test, "008", "009");
-	//ft_push_back_link_lst(&link, &test, "009", "010");
-	//ft_push_back_link_lst(&link, &test, "010", "011");
-	//ft_push_back_link_lst(&link, &test, "start", "011");
-	//ft_push_back_link_lst(&link, &test, "end", "001");
+	ft_push_back_link_lst(&link, &test, "002", "003");
+	ft_push_back_link_lst(&link, &test, "003", "004");
+	ft_push_back_link_lst(&link, &test, "004", "005");
+	ft_push_back_link_lst(&link, &test, "005", "006");
+	ft_push_back_link_lst(&link, &test, "006", "007");
+	ft_push_back_link_lst(&link, &test, "007", "008");
+	ft_push_back_link_lst(&link, &test, "008", "009");
+	ft_push_back_link_lst(&link, &test, "009", "010");
+	ft_push_back_link_lst(&link, &test, "010", "011");
+	ft_push_back_link_lst(&link, &test, "start", "011");
+	ft_push_back_link_lst(&link, &test, "end", "001");
 	ft_push_back_link_lst(&link, &test, "end", "005");
-	//ft_push_back_link_lst(&link, &test, "005", "011");
-	//ft_push_back_link_lst(&link, &test, "end", "start");
-	//ft_push_back_link_lst(&link, &test, "end", "002");
-	//ft_push_back_link_lst(&link, &test, "end", "003");
-	//ft_push_back_link_lst(&link, &test, "end", "004");
+	ft_push_back_link_lst(&link, &test, "005", "011");
+	ft_push_back_link_lst(&link, &test, "end", "start");
+	ft_push_back_link_lst(&link, &test, "end", "002");
+	ft_push_back_link_lst(&link, &test, "end", "003");
+	ft_push_back_link_lst(&link, &test, "end", "004");
 	ft_push_back_link_lst(&link, &test, "start", "001");
-	//ft_push_back_link_lst(&link, &test, "start", "002");
-	//ft_push_back_link_lst(&link, &test, "start", "003");
-	//ft_push_back_link_lst(&link, &test, "start", "004");
+	ft_push_back_link_lst(&link, &test, "start", "002");
+	ft_push_back_link_lst(&link, &test, "start", "003");
+	ft_push_back_link_lst(&link, &test, "start", "004");
 	count_link_for_room(&test, &link);
 	generate_room_array(&test, &link);
 
@@ -445,4 +481,5 @@ int					main(void)
 		i++;
 	}
 	printf("start == %d || end == %d || i == %d\n", lst2->occuped, lst->occuped, i - 1);
+	_exit (1);
 }
