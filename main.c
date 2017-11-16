@@ -51,12 +51,19 @@ void	*ft_malloc(size_t size)
 	return (ret);
 }
 
+AAA-AA
+AA-A
+
 void				ft_str_room_link(t_list **addr, char *str)
 {
 	t_list			*lst;
 	t_room			*room;
 	int				count;
+	t_room			*room1;
+	t_room			*room2;
 
+	room1 = NULL;
+	room2 = NULL;
 	count = 0;
 	lst = *addr;
 	if (!lst)
@@ -64,12 +71,20 @@ void				ft_str_room_link(t_list **addr, char *str)
 	while (lst->next)
 	{
 		room = (t_room *)lst->content;
-		if (ft_strcmp(ft_strstr(str, room->name), room->name))
-			count++;
+		if (ft_strstr(str, room->name))
+		{
+			if (room1 == room)
+				room1 = room;
+			else if (room2 == NULL)
+				room2 = room;
+			else
+				exit(0);
+		}
 		lst = lst->next;
 	}
-	if (count != 2)
-		exit(0);
+	if (1 + ft_strlen(room1->name) + ft_strlen(room2->name) == ft_strlen(str))
+		return ;
+	exit(0);
 }
 
 t_room				*get_room(t_list **addr, char *name)
