@@ -70,7 +70,7 @@ void				ft_str_room_link(t_list **addr, char *str)
 		room = (t_room *)lst->content;
 		if (ft_strstr(str, room->name))
 		{
-			if (room1 == room)
+			if (room1 == NULL)
 				room1 = room;
 			else if (room2 == NULL)
 				room2 = room;
@@ -79,6 +79,8 @@ void				ft_str_room_link(t_list **addr, char *str)
 		}
 		lst = lst->next;
 	}
+	if (!room1 || !room2)
+		exit(0);
 	if (1 + ft_strlen(room1->name) + ft_strlen(room2->name) == ft_strlen(str))
 		return ;
 	exit(0);
