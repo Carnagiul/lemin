@@ -203,6 +203,11 @@ void				ft_push_back_room_lst(t_list **addr, t_room *room)
 	t_list			*lst;
 
 	lst = *addr;
+	if (!lst)
+	{
+		*addr = ft_create_lst_room(room);
+		return ;
+	}
 	verif_room_exist(addr, room);
 	while (lst->next)
 		lst = lst->next;
