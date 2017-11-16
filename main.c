@@ -4,7 +4,7 @@ void	exit_error(void);
 
 void	exit_error(void)
 {
-	printf("MAKAKA\n");
+	printf("Error\n");
 }
 
 typedef struct		s_room
@@ -18,6 +18,9 @@ typedef struct		s_room
 	int				is_start;
 	int				is_end;
 	char			*name;
+	int				x;
+	int				y;
+
 }					t_room;
 
 typedef struct		s_link
@@ -109,7 +112,7 @@ void				calc_dist_from_room(t_list **mem)
 	}
 }
 
-t_room				*create_new_room(char *name)
+t_room				*create_new_room(char *name, int x, int y)
 {
 	t_room			*ret;
 
@@ -123,6 +126,8 @@ t_room				*create_new_room(char *name)
 	ret->room_linked = NULL;
 	ret->room_moved = NULL;
 	ret->moved = 0;
+	ret->x = x;
+	ret->y = y;
 	return (ret);
 }
 
@@ -170,17 +175,39 @@ t_list				*ft_create_lst_room(t_room *room)
 	return (lst);
 }
 
+void				verif_room_exist(t_list **addr, t_room *room)
+{
+	t_list			*lst;
+	t_room			*data;
+
+	lst = *addr;
+	while (lst->next)
+	{
+		data = (t_room *)lst->content;
+		if (ft_strcmp(room->name, data->name) == 0)
+			exit(0);
+		if (room->x == data->x && data->y == room->y)
+			exit(0);
+		if (room->is_start == 1 && data->is_start == 1)
+			exit(0);
+		if (room->is_end == 1 && data->is_end == 1)
+			exit(0);
+		lst = lst->next;
+	}
+}
+
 void				ft_push_back_room_lst(t_list **addr, t_room *room)
 {
 	t_list			*lst;
 
 	lst = *addr;
+	verif_room_exist(addr, room);
 	while (lst->next)
 		lst = lst->next;
 	if (lst)
 		lst->next = ft_create_lst_room(room);
 	else
-		lst = ft_create_lst_room(room);
+		*addr = ft_create_lst_room(room);
 }
 
 t_link				*gen_link1(char *name1, char *name2, t_list **addr)
@@ -420,26 +447,30 @@ int					main(void)
 	t_room			*lst2;
 	t_list			*test;
 	t_link			*link;
+	int				i;
 
+	i = 1;
 	atexit(&exit_error);
 	read_file();
-	lst = create_new_room("end");
+	test = NULL;
+	lst = create_new_room("end", 1, 1);
 	lst->is_end = 1;
-	lst2 = create_new_room("start");
+	ft_push_back_room_lst(&test, lst);
+	lst2 = create_new_room("start", 0, 0);
 	lst2->is_start = 1;
-	test = ft_create_lst_room(lst);
 	ft_push_back_room_lst(&test, lst2);
-	ft_push_back_room_lst(&test, create_new_room("001"));
-	ft_push_back_room_lst(&test, create_new_room("002"));
-	ft_push_back_room_lst(&test, create_new_room("003"));
-	ft_push_back_room_lst(&test, create_new_room("004"));
-	ft_push_back_room_lst(&test, create_new_room("005"));
-	ft_push_back_room_lst(&test, create_new_room("006"));
-	ft_push_back_room_lst(&test, create_new_room("007"));
-	ft_push_back_room_lst(&test, create_new_room("008"));
-	ft_push_back_room_lst(&test, create_new_room("009"));
-	ft_push_back_room_lst(&test, create_new_room("010"));
-	ft_push_back_room_lst(&test, create_new_room("011"));
+
+	ft_push_back_room_lst(&test, create_new_room("001", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("002", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("003", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("004", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("005", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("006", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("007", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("008", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("009", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("010", 0, i++));
+	ft_push_back_room_lst(&test, create_new_room("011", 0, i++));
 	link = gen_link1("001", "002", &test);
 	ft_push_back_link_lst(&link, &test, "002", "003");
 	ft_push_back_link_lst(&link, &test, "003", "004");
