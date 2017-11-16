@@ -181,6 +181,8 @@ void				verif_room_exist(t_list **addr, t_room *room)
 	t_room			*data;
 
 	lst = *addr;
+	if (!lst)
+		return ;
 	while (lst->next)
 	{
 		data = (t_room *)lst->content;
