@@ -500,7 +500,6 @@ int					main(void)
 
 	lst2->occuped = 4;
 	int ants;
-	int	i;
 
 	i = 1;
 	ants = lst2->occuped;
