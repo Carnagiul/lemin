@@ -55,18 +55,21 @@ void				ft_str_room_link(t_list **addr, char *str)
 {
 	t_list			*lst;
 	t_room			*room;
+	int				count;
 
+	count = 0;
 	lst = *addr;
 	if (!lst)
 		exit(0);
 	while (lst->next)
 	{
 		room = (t_room *)lst->content;
-		if (ft_strstr(str, room->name))
-			return ;
+		if (ft_strcmp(ft_strstr(str, room->name), room->name))
+			count++;
 		lst = lst->next;
 	}
-	exit(0);
+	if (count != 2)
+		exit(0);
 }
 
 t_room				*get_room(t_list **addr, char *name)
@@ -496,8 +499,9 @@ int					main(void)
 	ft_push_back_room_lst(&test, create_new_room("009", 0, i++));
 	ft_push_back_room_lst(&test, create_new_room("010", 0, i++));
 	ft_push_back_room_lst(&test, create_new_room("011", 0, i++));
+	ft_str_room_link(&test, "kappa-001");
+
 	link = gen_link1("001", "002", &test);
-	ft_str_room_link(&test, "002-001");
 
 	ft_push_back_link_lst(&link, &test, "002", "003");
 	ft_push_back_link_lst(&link, &test, "003", "004");
