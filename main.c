@@ -51,9 +51,6 @@ void	*ft_malloc(size_t size)
 	return (ret);
 }
 
-AAA-AA
-AA-A
-
 void				ft_str_room_link(t_list **addr, char *str)
 {
 	t_list			*lst;
