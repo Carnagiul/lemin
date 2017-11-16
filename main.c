@@ -51,6 +51,24 @@ void	*ft_malloc(size_t size)
 	return (ret);
 }
 
+void				ft_str_room_link(t_list **addr, char *str)
+{
+	t_list			*lst;
+	t_room			*room;
+
+	lst = *addr;
+	if (!lst)
+		exit(0);
+	while (lst->next)
+	{
+		room = (t_room *)lst->content;
+		if (ft_strstr(str, room->name))
+			return ;
+		lst = lst->next;
+	}
+	exit(0);
+}
+
 t_room				*get_room(t_list **addr, char *name)
 {
 	t_list			*lst;
@@ -479,6 +497,8 @@ int					main(void)
 	ft_push_back_room_lst(&test, create_new_room("010", 0, i++));
 	ft_push_back_room_lst(&test, create_new_room("011", 0, i++));
 	link = gen_link1("001", "002", &test);
+	ft_str_room_link(&test, "002-001");
+
 	ft_push_back_link_lst(&link, &test, "002", "003");
 	ft_push_back_link_lst(&link, &test, "003", "004");
 	ft_push_back_link_lst(&link, &test, "004", "005");
