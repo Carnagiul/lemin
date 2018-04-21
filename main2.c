@@ -40,14 +40,6 @@ typedef struct              s_lem
 ** [1] == x
 ** [2] == y
 **/
-
-void exit_error(void);
-
-void exit_error(void)
-{
-    ft_printf("ERROR\n");
-}
-
 void                *ft_malloc(size_t size)
 {
     void            *ret;
@@ -211,26 +203,24 @@ void                add_tube(char *str, t_listroom **tmp)
     }
     if (!a || !b || ft_strcmp(split[0], split[1]) == 0)
         exit(0);
-    free_char_ss(split);
     insert_tube(a, b);
 }
 
-void    set_file(t_lem *lem)
+void    set_file(t_lem *lem, char *str)
 {
+    char *ret;
     int i;
     int type;
     int tube;
-    int done;
-    char *rk;
 
     tube = 0;
     i = -1;
+    ret = ft_get_content_file(str);
+    lem->filecontents = ft_strsplit(ret, '\n');
     type = 0;
-    done = 0;
     while (lem->filecontents[++i])
     {
-        if (ft_strlen(lem->filecontents[i]) == 0)
-            return ;
+        printf("TEST %d && %d && %d\n", i, tube, type);
         if (lem->filecontents[i][0] == '#')
         {
             if (ft_strcmp(lem->filecontents[i], "##start") == 0)
@@ -240,39 +230,27 @@ void    set_file(t_lem *lem)
         }
         else
         {
-            if (done == 0)
+            if (type >= 0)
             {
-                if (type == 0)
+                if (tube == 1)
                 {
-                    lem->atns = ft_atoi(lem->filecontents[i]);
-                    rk = ft_itoa(lem->atns);
-                    if (ft_strcmp(rk, lem->filecontents[i]) != 0)
-                        exit(0);
-                    ft_strdel(&rk);
-                    done = 1;
+                    add_tube(lem->filecontents[i], &(lem->rooms));
                 }
                 else
-                    exit(0);
-            }
-            else
-            {
-                if (type >= 0)
                 {
-                    if (tube == 1)
-                    {
-                        add_tube(lem->filecontents[i], &(lem->rooms));
-                    }
-                    else
-                    {
-                        add_room(set_room(lem->filecontents[i], type), &(lem->rooms));
-                    }
-                    if (type == 2)
-                        tube = 1;
+                    add_room(set_room(lem->filecontents[i], type), &(lem->rooms));
                 }
+                if (type == 2)
+                    tube = 1;
             }
             type = 0;
         }
     }
+}
+
+char *fill_file(void)
+{
+    return (strdup("manual_entry.lemin.log"));
 }
 
 void  display_room_data(t_room *room)
@@ -317,50 +295,16 @@ void display_room_and_tubes(t_lem *lem)
     }
 }
 
-void    read_entry(t_lem *lem)
-{
-    char    *ret;
-    char	*content;
-
-    content = ft_strnew(1);
-    while (get_next_line(1, &ret) == 1)
-    {
-        if (ft_strlen(ret) == 0)
-        {
-            ft_strdel(&ret);
-            lem->filecontents = ft_strsplit(content, '\n');
-            ft_strdel(&content);
-            return ;
-        }
-        content = ft_free_join1(content, ret);
-        content = ft_free_join1(content, "\n");
-        ft_strdel(&ret);
-    }
-}
-
 int main(int argc, char **argv)
 {
     t_lem *lem;
-    char  *ret;
 
-    atexit(&exit_error);
     lem = ft_malloc(sizeof(t_lem));
     lem->rooms = NULL;
     lem->atns = 0;
     if (argc == 2)
-    {
-        ret = ft_get_content_file(argv[1]);
-        lem->filecontents = ft_strsplit(ret, '\n');
-        ft_strdel(&ret);
-    }
-    else
-    {
-        read_entry(lem);
-    }
-    set_file(lem);
+        set_file(lem, argv[1]);
     set_dist(&lem->rooms);
     display_room_and_tubes(lem);
-	while (1)
-		;
-   // _exit(0);
+
 }
