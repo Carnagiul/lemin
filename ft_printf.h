@@ -83,7 +83,7 @@ typedef struct			s_itoa
 typedef struct			s_printf
 {
 	char				c;
-	void				(*f)(char c, ...);
+	void				(*f)(const int c, ...);
 }						t_printf;
 
 /*
@@ -224,11 +224,11 @@ void					ft_putwchar(int wc, t_print *print);
 ** FT_PRINTF_PARSER_CHECKER_1.c
 */
 
-void					ft_printf_parser_digit(char c, ...);
+void					ft_printf_parser_digit(const int c, ...);
 
-void					ft_printf_parser_flags(char c, ...);
+void					ft_printf_parser_flags(const int c, ...);
 
-void					ft_printf_parser_specs(char c, ...);
+void					ft_printf_parser_specs(const int c, ...);
 
 /*
 ** FT_PRINTF_STRING.C

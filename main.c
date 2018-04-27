@@ -475,6 +475,8 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		ret = ft_get_content_file(argv[1]);
+		if (!ret)
+			exit(0);
 		lem->filecontents = ft_strsplit(ret, '\n');
 		ft_strdel(&ret);
 	}
@@ -489,4 +491,4 @@ int main(int argc, char **argv)
 	display_path(lem->path);
 	move_ants(lem);
 	_exit(0);
-m
+}

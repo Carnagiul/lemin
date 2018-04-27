@@ -64,6 +64,8 @@ OBJ_2 = ./obj/ft_display.o \
 
 INCLUDE = $(shell find ../ -type f | grep "\.h")
 
+CFLAGS = -Wvarargs
+
 obj/%.o: %.c
 	mkdir -p obj/
 	gcc -o $@ -c $< $(CFLAGS)
