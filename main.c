@@ -1,52 +1,5 @@
 #include "libft.h"
 
-typedef struct              s_tube
-{
-	struct s_room           *room;
-	struct s_tube           *next;
-}                           t_tube;
-
-typedef struct              s_room
-{
-	char                    *name;
-	int                     x;
-	int                     y;
-	int                     start;
-	int                     end;
-	int                     toggle;
-	int                     dist;
-	int                     a_id;
-	struct s_tube           *tube;
-}                           t_room;
-
-typedef struct              s_listroom
-{
-	struct s_room           *room;
-	struct s_listroom       *next;
-	struct s_listroom       *end;
-	struct s_listroom       *start;
-}                           t_listroom;
-
-
-typedef struct              s_lem
-{
-	int                     atns;
-	char                    *filename;
-	char                    **filecontents;
-	struct s_listroom       *rooms;
-	struct s_tube           *path;
-}                           t_lem;
-
-void                free_char_ss(char **str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		free(str[i++]);
-	free(str);
-}
-
 t_room              *get_end(t_listroom **lst)
 {
 	t_listroom *list;
@@ -253,7 +206,7 @@ void    set_file(t_lem *lem)
 				{
 					lem->atns = ft_atoi(lem->filecontents[i]);
 					rk = ft_itoa(lem->atns);
-					if (ft_strcmp(rk, lem->filecontents[i]) != 0)
+					if (ft_strcmp(rk, lem->filecontents[i]) != 0 || lem->atns <= 0)
 						exit(0);
 					ft_strdel(&rk);
 					done = 1;

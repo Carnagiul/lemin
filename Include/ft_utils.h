@@ -25,5 +25,6 @@ int					ft_atoi_base(char *str, int base);
 void				*ft_malloc(size_t size);
 void				ft_exit_error(void);
 void				ft_init_exit_error(void);
+void				free_char_ss(char **str);
 
 #endif

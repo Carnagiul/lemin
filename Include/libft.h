@@ -31,5 +31,6 @@
 # include "ft_string.h"
 # include "ft_printf.h"
 # include "ft_wstr.h"
+# include "ft_lemin.h"
 
 #endif
