@@ -14,12 +14,11 @@ NAME = ./a.out
 
 CFLAGS = -Wall -Werror -Wextra -Ofast -Wunreachable-code
 
-INCLUDE = $(shell find . -type f | grep "\.h")
 C = $(shell find . -type f | grep "\.c")
 O = $(C:%.c=%.o)
 
 %.o: %.c
-	gcc -I ./ -o $@ -c $<
+	gcc $(CFLAGS) -I Include/ -o $@ -c $<
 
 $(NAME): $(O)
 	gcc -o $(NAME) $(O)
