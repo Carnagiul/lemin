@@ -15,9 +15,10 @@ NAME = ./a.out
 CFLAGS = -Wall -Werror -Wextra -Ofast -Wunreachable-code
 
 C = $(shell find . -type f | grep "\.c")
+H = $(shell find . -type f | grep "\.h")
 O = $(C:%.c=%.o)
 
-%.o: %.c
+%.o: %.c $(H)
 	gcc $(CFLAGS) -I Include/ -o $@ -c $<
 
 $(NAME): $(O)

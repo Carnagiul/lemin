@@ -37,23 +37,6 @@ typedef struct              s_lem
 	struct s_tube           *path;
 }                           t_lem;
 
-void exit_error(void);
-
-void exit_error(void)
-{
-	ft_printf("ERROR\n");
-}
-
-void                *ft_malloc(size_t size)
-{
-	void            *ret;
-
-	ret = malloc(size);
-	if (!ret)
-		exit(0);
-	return (ret);
-}
-
 void                free_char_ss(char **str)
 {
 	int i;
@@ -468,7 +451,7 @@ int main(int argc, char **argv)
 	t_lem *lem;
 	char  *ret;
 
-	atexit(&exit_error);
+	ft_init_exit_error();
 	lem = ft_malloc(sizeof(t_lem));
 	lem->rooms = NULL;
 	lem->atns = 0;
