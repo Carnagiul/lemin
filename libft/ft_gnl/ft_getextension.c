@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.h                                           :+:      :+:    :+:   */
+/*   ft_getextension.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/19 00:05:01 by piquerue          #+#    #+#             */
-/*   Updated: 2016/12/19 00:06:09 by piquerue         ###   ########.fr       */
+/*   Created: 2017/07/05 20:05:08 by piquerue          #+#    #+#             */
+/*   Updated: 2017/07/17 03:37:55 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GNL_H
-# define FT_GNL_H
+#include "libft.h"
 
-# define BUFF_SIZE	32
-# define MAX_FD		1000
-
-typedef struct		s_files
+char	*ft_get_extension(char *str)
 {
-	int				fd;
-	char			*new;
-	size_t			size;
-	unsigned int	passage;
-}					t_files;
+	char	**tab;
+	int		i;
+	char	*ret;
 
-int					get_next_line(int fd, char **line);
-char				*ft_get_content_file(char *file);
-char				*ft_get_content_file_fd(int fd);
-char				*ft_get_extension(char *str);
-
-#endif
+	i = 0;
+	tab = ft_strsplit(str, '.');
+	while (tab[i])
+		i++;
+	ret = ft_strdup(tab[i - 1]);
+	while (i > 0)
+		free(tab[--i]);
+	free(tab);
+	return (ret);
+}

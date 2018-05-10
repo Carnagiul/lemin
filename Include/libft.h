@@ -21,7 +21,14 @@
 # include <wchar.h>
 # include <fcntl.h>
 # include <stdint.h>
+# include <dirent.h>
+# include <time.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <pwd.h>
+# include <grp.h>
 # include "ft_math.h"
+# include "ft_files.h"
 # include "ft_gnl.h"
 # include "ft_display.h"
 # include "ft_delimiteur.h"
