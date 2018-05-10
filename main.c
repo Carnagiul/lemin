@@ -113,21 +113,15 @@ void    read_entry(t_lem *lem)
 	char	*content;
 
 	content = ft_strnew(1);
-	while (get_next_line(1, &ret) == 1)
+	while (get_next_line(0, &ret) == 1)
 	{
-		if (ft_strlen(ret) == 0)
-		{
-			ft_strdel(&ret);
-			if (ft_strlen(content) < 10)
-				exit(0);
-			lem->filecontents = ft_strsplit(content, '\n');
-			ft_strdel(&content);
-			return ;
-		}
 		content = ft_free_join1(content, ret);
 		content = ft_free_join1(content, "\n");
 		ft_strdel(&ret);
 	}
+	if (ft_strlen(content) < 10)
+		exit(0);
+	lem->filecontents = ft_strsplit(content, '\n');
 }
 
 void move_ants(t_lem *lem)
@@ -183,28 +177,20 @@ int main(int argc, char **argv)
 	t_lem *lem;
 	char  *ret;
 
-	ft_unix_string_display_put();
+	//ft_unix_string_display_put();
 	ft_init_exit_error();
 	lem = ft_malloc(sizeof(t_lem));
 	lem->rooms = NULL;
 	lem->atns = 0;
-	if (argc == 2)
-	{
-		ret = ft_get_content_file(argv[1]);
-		if (!ret)
-			exit(0);
-		lem->filecontents = ft_strsplit(ret, '\n');
-		ft_strdel(&ret);
-	}
-	else
-	{
+	if (argc == 1)
 		read_entry(lem);
-	}
 	set_file(lem);
 	set_dist(&lem->rooms);
 	display_room_and_tubes(lem);
 	lem->path = create_quick_path(get_start(&lem->rooms));
 	display_path(lem->path);
-	move_ants(lem);
+	//move_ants(lem);
+	(void) argv;
+	(void) ret;
 	_exit(0);
 }

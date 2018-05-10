@@ -6,6 +6,6 @@ void		*ft_malloc(size_t size)
 
 	ret = malloc(size);
 	if (!ret)
-		exit(ft_printf("@RERROR@@: Can't malloc %lld object\n", size));
+		exit(ft_printf("@RERROR@@: Can't malloc %llu object\n", size));
 	return (ret);
 }

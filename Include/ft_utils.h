@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/18 20:32:05 by piquerue          #+#    #+#             */
-/*   Updated: 2016/12/30 23:47:26 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/10 14:52:17 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_UTILS_H
 
 # define ERROR_MSG_DISPLAY "ERROR"
-# define ERROR_CUSTOM_MSG 0
+# define ERROR_CUSTOM_MSG 1
 
 int					ft_atoi(char const *str);
 char				*ft_itoa(int nb);

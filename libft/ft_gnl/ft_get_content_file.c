@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 02:15:42 by piquerue          #+#    #+#             */
-/*   Updated: 2017/07/11 01:05:26 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/10 14:50:00 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,20 @@ char		*ft_get_content_file(char *file)
 	int		fd;
 	char	*content;
 	char	*gnl;
+	int		ret;
 
 	fd = open(file, O_RDONLY);
 	if (fd >= 1)
 	{
 		content = ft_strnew(1);
-		while (get_next_line(fd, &gnl) == 1)
+		while ((ret = get_next_line(fd, &gnl)) == 1)
 		{
 			content = ft_free_join1(content, gnl);
 			content = ft_free_join1(content, "\n");
 			ft_strdel(&gnl);
 		}
+		if (ret == -1)
+			exit(0);
 		close(fd);
 		return (content);
 	}
