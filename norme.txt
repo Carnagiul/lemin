@@ -1,0 +1,528 @@
+Norme: ./Include/ft_delimiteur.h
+Norme: ./Include/ft_display.h
+Norme: ./Include/ft_gnl.h
+Norme: ./Include/ft_files.h
+Error (line 16): struct and passwd not separated by a single space.
+Error (line 17): struct and group not separated by a single space.
+Error (line 18): struct and stat not separated by a single space.
+Error (line 24): line has 88 characters
+Norme: ./Include/ft_list.h
+Norme: ./Include/ft_memory.h
+Norme: ./Include/ft_lemin.h
+Error: global scope bad aligned
+Error: 42 header not at top of the file
+Error (line 32): multiple empty lines
+Norme: ./Include/ft_printf_mappeur.h
+Norme: ./Include/ft_math.h
+Norme: ./Include/ft_utils.h
+Norme: ./Include/ft_printf.h
+Norme: ./Include/ft_wstr_mappeur.h
+Error: 42 header not at top of the file
+Error (line 5): bad indentation
+Error (line 6): bad indentation
+Error (line 7): bad indentation
+Error (line 8): bad indentation
+Error (line 9): bad indentation
+Error (line 10): bad indentation
+Error (line 11): bad indentation
+Error (line 12): bad indentation
+Error (line 13): bad indentation
+Error (line 14): bad indentation
+Error (line 15): bad indentation
+Error (line 16): bad indentation
+Error (line 17): bad indentation
+Error (line 18): bad indentation
+Error (line 19): bad indentation
+Error (line 20): bad indentation
+Error (line 21): bad indentation
+Error (line 22): bad indentation
+Error (line 23): bad indentation
+Error (line 24): bad indentation
+Error (line 25): bad indentation
+Error (line 26): bad indentation
+Error (line 27): bad indentation
+Error (line 28): bad indentation
+Error (line 29): bad indentation
+Error (line 30): bad indentation
+Error (line 31): bad indentation
+Error (line 32): bad indentation
+Error (line 33): bad indentation
+Error (line 34): bad indentation
+Error (line 35): bad indentation
+Error (line 36): bad indentation
+Error (line 37): bad indentation
+Error (line 38): bad indentation
+Error (line 39): bad indentation
+Error (line 40): bad indentation
+Error (line 41): bad indentation
+Error (line 42): bad indentation
+Error (line 43): bad indentation
+Error (line 44): bad indentation
+Error (line 45): bad indentation
+Error (line 46): bad indentation
+Error (line 47): bad indentation
+Error (line 48): bad indentation
+Error (line 49): bad indentation
+Error (line 50): bad indentation
+Error (line 51): bad indentation
+Error (line 52): bad indentation
+Error (line 53): bad indentation
+Error (line 54): bad indentation
+Error (line 55): bad indentation
+Error (line 56): bad indentation
+Error (line 57): bad indentation
+Error (line 58): bad indentation
+Error (line 59): bad indentation
+Error (line 60): bad indentation
+Error (line 61): bad indentation
+Error (line 62): bad indentation
+Error (line 63): bad indentation
+Error (line 64): bad indentation
+Error (line 65): bad indentation
+Error (line 66): bad indentation
+Error (line 67): bad indentation
+Error (line 68): bad indentation
+Error (line 69): bad indentation
+Error (line 70): bad indentation
+Error (line 71): bad indentation
+Error (line 72): bad indentation
+Error (line 73): bad indentation
+Error (line 74): bad indentation
+Error (line 75): bad indentation
+Error (line 76): bad indentation
+Error (line 77): bad indentation
+Error (line 78): bad indentation
+Error (line 79): bad indentation
+Error (line 80): bad indentation
+Error (line 81): bad indentation
+Error (line 82): bad indentation
+Error (line 83): bad indentation
+Error (line 84): bad indentation
+Error (line 85): bad indentation
+Error (line 86): bad indentation
+Error (line 87): bad indentation
+Error (line 88): bad indentation
+Error (line 89): bad indentation
+Error (line 90): bad indentation
+Error (line 91): bad indentation
+Error (line 92): bad indentation
+Error (line 93): bad indentation
+Error (line 94): bad indentation
+Error (line 95): bad indentation
+Error (line 96): bad indentation
+Error (line 97): bad indentation
+Error (line 98): bad indentation
+Error (line 99): bad indentation
+Error (line 100): bad indentation
+Error (line 101): bad indentation
+Error (line 102): bad indentation
+Error (line 103): bad indentation
+Error (line 104): bad indentation
+Error (line 105): bad indentation
+Error (line 106): bad indentation
+Error (line 107): bad indentation
+Error (line 108): bad indentation
+Error (line 109): bad indentation
+Error (line 110): bad indentation
+Error (line 111): bad indentation
+Error (line 112): bad indentation
+Error (line 113): bad indentation
+Error (line 114): bad indentation
+Error (line 115): bad indentation
+Error (line 116): bad indentation
+Error (line 117): bad indentation
+Error (line 118): bad indentation
+Error (line 119): bad indentation
+Error (line 120): bad indentation
+Error (line 121): bad indentation
+Error (line 122): bad indentation
+Error (line 123): bad indentation
+Error (line 124): bad indentation
+Error (line 125): bad indentation
+Error (line 126): bad indentation
+Error (line 127): bad indentation
+Error (line 128): bad indentation
+Error (line 129): bad indentation
+Error (line 130): bad indentation
+Error (line 131): bad indentation
+Error (line 132): bad indentation
+Error (line 133): bad indentation
+Error (line 134): bad indentation
+Error (line 135): bad indentation
+Error (line 136): bad indentation
+Error (line 137): bad indentation
+Error (line 138): bad indentation
+Error (line 139): bad indentation
+Error (line 140): bad indentation
+Error (line 141): bad indentation
+Error (line 142): bad indentation
+Error (line 143): bad indentation
+Error (line 144): bad indentation
+Error (line 145): bad indentation
+Error (line 146): bad indentation
+Error (line 147): bad indentation
+Error (line 148): bad indentation
+Error (line 149): bad indentation
+Error (line 150): bad indentation
+Error (line 151): bad indentation
+Error (line 152): bad indentation
+Error (line 153): bad indentation
+Error (line 154): bad indentation
+Error (line 155): bad indentation
+Error (line 156): bad indentation
+Error (line 157): bad indentation
+Error (line 158): bad indentation
+Error (line 159): bad indentation
+Error (line 160): bad indentation
+Error (line 161): bad indentation
+Error (line 162): bad indentation
+Error (line 163): bad indentation
+Error (line 164): bad indentation
+Error (line 165): bad indentation
+Error (line 166): bad indentation
+Error (line 167): bad indentation
+Error (line 168): bad indentation
+Error (line 169): bad indentation
+Error (line 170): bad indentation
+Error (line 171): bad indentation
+Error (line 172): bad indentation
+Error (line 173): bad indentation
+Error (line 174): bad indentation
+Error (line 175): bad indentation
+Error (line 176): bad indentation
+Error (line 177): bad indentation
+Error (line 178): bad indentation
+Error (line 179): bad indentation
+Error (line 180): bad indentation
+Error (line 181): bad indentation
+Error (line 182): bad indentation
+Error (line 183): bad indentation
+Error (line 184): bad indentation
+Error (line 185): bad indentation
+Error (line 186): bad indentation
+Error (line 187): bad indentation
+Error (line 188): bad indentation
+Error (line 189): bad indentation
+Error (line 190): bad indentation
+Error (line 191): bad indentation
+Error (line 192): bad indentation
+Error (line 193): bad indentation
+Error (line 194): bad indentation
+Error (line 195): bad indentation
+Error (line 196): bad indentation
+Error (line 197): bad indentation
+Error (line 198): bad indentation
+Error (line 199): bad indentation
+Error (line 200): bad indentation
+Error (line 201): bad indentation
+Error (line 202): bad indentation
+Error (line 203): bad indentation
+Error (line 204): bad indentation
+Error (line 205): bad indentation
+Error (line 206): bad indentation
+Error (line 207): bad indentation
+Error (line 208): bad indentation
+Error (line 209): bad indentation
+Error (line 210): bad indentation
+Error (line 211): bad indentation
+Error (line 212): bad indentation
+Error (line 213): bad indentation
+Error (line 214): bad indentation
+Error (line 215): bad indentation
+Error (line 216): bad indentation
+Error (line 217): bad indentation
+Error (line 218): bad indentation
+Error (line 219): bad indentation
+Error (line 220): bad indentation
+Error (line 221): bad indentation
+Error (line 222): bad indentation
+Error (line 223): bad indentation
+Error (line 224): bad indentation
+Error (line 225): bad indentation
+Error (line 226): bad indentation
+Error (line 227): bad indentation
+Error (line 228): bad indentation
+Error (line 229): bad indentation
+Error (line 230): bad indentation
+Error (line 231): bad indentation
+Error (line 232): bad indentation
+Error (line 233): bad indentation
+Error (line 234): bad indentation
+Error (line 235): bad indentation
+Error (line 236): bad indentation
+Error (line 237): bad indentation
+Error (line 238): bad indentation
+Error (line 239): bad indentation
+Error (line 240): bad indentation
+Error (line 241): bad indentation
+Error (line 242): bad indentation
+Error (line 243): bad indentation
+Error (line 244): bad indentation
+Error (line 245): bad indentation
+Error (line 246): bad indentation
+Error (line 247): bad indentation
+Error (line 248): bad indentation
+Error (line 249): bad indentation
+Error (line 250): bad indentation
+Error (line 251): bad indentation
+Error (line 252): bad indentation
+Error (line 253): bad indentation
+Error (line 254): bad indentation
+Error (line 255): bad indentation
+Error (line 256): bad indentation
+Error (line 257): bad indentation
+Error (line 258): bad indentation
+Error (line 259): bad indentation
+Error (line 260): bad indentation
+Error (line 261): bad indentation
+Error (line 262): bad indentation
+Error (line 263): bad indentation
+Error (line 264): bad indentation
+Error (line 265): bad indentation
+Error (line 266): bad indentation
+Error (line 267): bad indentation
+Error (line 270): multiple empty lines
+Norme: ./lemin/ft_lemin_display.c
+Error: 42 header not at top of the file
+Norme: ./Include/ft_string.h
+Norme: ./Include/ft_wstr.h
+Error: global scope bad aligned
+Error (line 16): multiple empty lines
+Norme: ./Include/libft.h
+Norme: ./lemin/path.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_delimiteur/ft_char_isalpha_maj.c
+Norme: ./libft/ft_delimiteur/ft_char_iswhitespaces.c
+Norme: ./lemin/ft_tube.c
+Error: global scope bad aligned
+Error: 42 header not at top of the file
+Error (line 3): bad spacing after add_tube
+Error (line 28): multiple empty lines
+Error (line 29): bad spacing before tube_set
+Error (line 39, col 9): Spacing after call to exit
+Norme: ./libft/ft_delimiteur/ft_isalpha.c
+Norme: ./lemin/room.c
+Error: global scope bad aligned
+Error: 42 header not at top of the file
+Error (line 10): Empty line
+Norme: ./libft/ft_delimiteur/ft_char_isalpha_min.c
+Norme: ./libft/ft_delimiteur/ft_isdigit.c
+Norme: ./libft/ft_display/ft_putchar.c
+Norme: ./libft/ft_delimiteur/ft_isalnum.c
+Norme: ./libft/ft_display/ft_putendl.c
+Norme: ./libft/ft_delimiteur/ft_isascii.c
+Norme: ./libft/ft_display/ft_putnbr.c
+Norme: ./libft/ft_delimiteur/ft_isprint.c
+Norme: ./libft/ft_display/ft_putnstr.c
+Norme: ./libft/ft_display/ft_putchar_fd.c
+Norme: ./libft/ft_display/ft_putendl_fd.c
+Norme: ./libft/ft_display/ft_putstr_fd.c
+Norme: ./libft/ft_display/ft_putnbr_fd.c
+Norme: ./libft/ft_files/ft_file_getgroup.c
+Error: 42 header not at top of the file
+Error: file must end with a single empty line
+Norme: ./libft/ft_display/ft_putstr.c
+Norme: ./libft/ft_files/ft_file_gettype.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_files/ft_file_chmod.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_files/ft_file_gettime.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_files/ft_files_count_dir.c
+Norme: ./libft/ft_files/ft_file_getuser.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_files/ft_files_count_files_contains_str.c
+Norme: ./libft/ft_files/ft_files_count_files.c
+Norme: ./libft/ft_files/ft_joinpath.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_gnl/ft_get_content_file.c
+Norme: ./libft/ft_gnl/ft_getextension.c
+Norme: ./libft/ft_list/libft/ft_list_at.c
+Norme: ./libft/ft_list/libft/ft_list_find_last.c
+Norme: ./libft/ft_list/libft/ft_list_push_front.c
+Norme: ./libft/ft_gnl/get_next_line.c
+Norme: ./libft/ft_list/libft/ft_list_find.c
+Norme: ./libft/ft_list/libft/ft_list_push_back.c
+Norme: ./libft/ft_list/libft/ft_list_reverse.c
+Norme: ./libft/ft_list/libft/ft_list_push_param.c
+Norme: ./libft/ft_list/libft/ft_list_size.c
+Norme: ./libft/ft_list/libft/ft_lstadd.c
+Norme: ./libft/ft_list/libft/ft_lstdelone.c
+Norme: ./libft/ft_list/libft/ft_lstmap.c
+Norme: ./libft/ft_list/libft/ft_list_sort.c
+Norme: ./libft/ft_list/t_complex/ft_t_complex_init.c
+Norme: ./libft/ft_list/libft/ft_lstdel.c
+Norme: ./libft/ft_list/t_point/ft_t_point_free.c
+Norme: ./libft/ft_list/libft/ft_lstiter.c
+Norme: ./libft/ft_math/ft_math_div.c
+Norme: ./libft/ft_list/libft/ft_lstnew.c
+Norme: ./libft/ft_math/ft_math_mod.c
+Norme: ./libft/ft_list/t_point/ft_t_point_create.c
+Norme: ./libft/ft_math/ft_math_abs.c
+Norme: ./libft/ft_math/ft_math_factorial.c
+Norme: ./libft/ft_math/ft_pow.c
+Norme: ./libft/ft_math/ft_math_sum.c
+Norme: ./libft/ft_math/ft_power.c
+Norme: ./libft/ft_math/ft_pow_ll.c
+Norme: ./libft/ft_memory/ft_bzero.c
+Norme: ./libft/ft_memory/ft_memalloc.c
+Norme: ./libft/ft_memory/ft_memccpy.c
+Norme: ./libft/ft_memory/ft_memchr.c
+Norme: ./libft/ft_memory/ft_memcmp.c
+Norme: ./libft/ft_memory/ft_memcpy.c
+Norme: ./libft/ft_memory/ft_memdel.c
+Norme: ./libft/ft_memory/ft_memset.c
+Norme: ./libft/ft_memory/ft_memmove.c
+Norme: ./libft/ft_printf/ft_display_next.c
+Norme: ./libft/ft_printf/ft_init_structs.c
+Norme: ./libft/ft_printf/ft_itoa_base_struct_next.c
+Norme: ./libft/ft_printf/ft_display.c
+Norme: ./libft/ft_printf/ft_free_itoa.c
+Norme: ./libft/ft_printf/ft_print_display.c
+Norme: ./libft/ft_printf/ft_printf_color.c
+Norme: ./libft/ft_printf/ft_itoa_base_struct.c
+Norme: ./libft/ft_printf/ft_printf_dollard.c
+Norme: ./libft/ft_printf/ft_parser_checker.c
+Norme: ./libft/ft_printf/ft_printf_help.c
+Norme: ./libft/ft_printf/ft_printf.c
+Norme: ./libft/ft_printf/ft_printf_debeug.c
+Norme: ./libft/ft_printf/ft_printf_double.c
+Norme: ./libft/ft_printf/ft_printf_int.c
+Norme: ./libft/ft_printf/ft_printf_n.c
+Norme: ./libft/ft_printf/ft_printf_itoa.c
+Norme: ./libft/ft_printf/ft_printf_parser.c
+Norme: ./libft/ft_printf/ft_printf_str.c
+Norme: ./libft/ft_printf/ft_printf_uint.c
+Norme: ./libft/ft_printf/ft_printf_p.c
+Norme: ./libft/ft_string/ft_strcat.c
+Norme: ./libft/ft_printf/ft_printf_percent.c
+Norme: ./libft/ft_string/ft_strclr.c
+Norme: ./libft/ft_printf/ft_printf_string.c
+Norme: ./libft/ft_string/ft_strcpy.c
+Norme: ./libft/ft_string/ft_reverse.c
+Norme: ./libft/ft_string/ft_strchr.c
+Norme: ./libft/ft_string/ft_strdup.c
+Norme: ./libft/ft_string/ft_strcmp.c
+Norme: ./libft/ft_string/ft_strdel.c
+Norme: ./libft/ft_string/ft_strequ.c
+Norme: ./libft/ft_string/ft_striter.c
+Norme: ./libft/ft_string/ft_string_capitalize.c
+Norme: ./libft/ft_string/ft_striteri.c
+Norme: ./libft/ft_string/ft_strlcat.c
+Norme: ./libft/ft_string/ft_strjoin.c
+Norme: ./libft/ft_string/ft_strmap.c
+Norme: ./libft/ft_string/ft_strlen.c
+Norme: ./libft/ft_string/ft_strncat.c
+Norme: ./libft/ft_string/ft_strncpy.c
+Norme: ./libft/ft_string/ft_strnew.c
+Norme: ./libft/ft_string/ft_strmapi.c
+Norme: ./libft/ft_string/ft_strncmp.c
+Norme: ./libft/ft_string/ft_strrchr.c
+Norme: ./libft/ft_string/ft_strnequ.c
+Norme: ./libft/ft_string/ft_strnstr.c
+Norme: ./libft/ft_string/ft_strstr.c
+Norme: ./libft/ft_string/ft_strtrim.c
+Norme: ./libft/ft_string/ft_strsplit.c
+Norme: ./libft/ft_string/ft_strsub.c
+Norme: ./libft/ft_utils/ft_atoi_base.c
+Norme: ./libft/ft_utils/ft_free_char_ss.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_utils/ft_atoi.c
+Norme: ./libft/ft_utils/ft_exit_error.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_utils/ft_init_exit_error.c
+Error: 42 header not at top of the file
+Error (line 3): multiple empty lines
+Error (line 4): bad spacing before ft_init_exit_error
+Norme: ./libft/ft_utils/ft_itoa.c
+Norme: ./libft/ft_utils/ft_malloc.c
+Error: 42 header not at top of the file
+Norme: ./libft/ft_utils/ft_toupper.c
+Norme: ./libft/ft_wstr/ft_wcharlen.c
+Error: global scope bad aligned
+Norme: ./libft/ft_utils/ft_itoa_base.c
+Norme: ./libft/ft_utils/ft_tolower.c
+Norme: ./libft/ft_wstr/ft_wstrlen.c
+Norme: ./libft/ft_wstr/ft_wchar_type.c
+Error: 42 header not at top of the file
+Error (line 4): multiple empty lines
+Error (line 5): bad spacing before ft_unix_string_get_name
+Error (line 37): declarations must be followed by one empty line in ft_unix_string_display_put_struct
+Error (line 63, col 4): bad spacing
+Error (line 64, col 4): bad spacing
+Error (line 69): line has 111 characters
+Error (line 71): line has 120 characters
+Norme: ./libft/ft_wstr/ft_wcharput.c
+Error: 42 header not at top of the file
+Error (line 5): multiple declarations
+Norme: ./main.c
+Error: global scope bad aligned
+Error: 6 functions in the file
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): function add_room has 27 lines
+Error (line 3, col 4): bad spacing
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34): Space before function name
+Error (line 34, col 4): bad spacing
+Error (line 41): missing newline after while
+Error (line 41, col 21): no newline before block
+Error (line 48): declarations in set_file are bad aligned
+Error (line 48): Space before function name
+Error (line 48): Space before function name
+Error (line 48): Space before function name
+Error (line 48): Space before function name
+Error (line 48): function set_file has 58 lines
+Error (line 48, col 4): bad spacing
+Error (line 81): line has 84 characters
+Error (line 99): line has 87 characters
+Error (line 110): Space before function name
+Error (line 110): Space before function name
+Error (line 110): Space before function name
+Error (line 110): Space before function name
+Error (line 110, col 4): bad spacing
+Error (line 112, col 5): bad spacing
+Error (line 127): declarations in move_ants are bad aligned
+Error (line 127): Space before function name
+Error (line 127): function move_ants has 44 lines
+Error (line 131, col 4): bad spacing
+Error (line 132, col 4): bad spacing
+Error (line 159): line has 130 characters
+Error (line 166): line has 83 characters
+Error (line 171): Empty line
+Error (line 172, col 1): no empty line before block
+Error (line 175): Space before function name
+Error (line 178, col 5): bad spacing
+Error (line 180): C++ comment
+Error (line 192): C++ comment
+Error (line 193, col 6): space after cast
+Error (line 194, col 6): space after cast
