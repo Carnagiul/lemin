@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/18 20:32:05 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/18 22:14:16 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/19 00:55:23 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ void						add_tube(char *str, t_listroom **tmp);
 void						set_dist(t_listroom **tmp);
 void						read_entry(t_lem *lem);
 void						add_room(t_room *room, t_listroom **tmp);
+void						set_file(t_lem *lem);
 
 #endif
