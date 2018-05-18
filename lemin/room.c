@@ -37,7 +37,7 @@ t_room					*get_end(t_listroom **lst)
 
 t_room					*get_start(t_listroom **lst)
 {
-	t_listroom *list;
+	t_listroom			*list;
 
 	list = *lst;
 	while (list)
@@ -49,10 +49,10 @@ t_room					*get_start(t_listroom **lst)
 	return (NULL);
 }
 
-t_room				*set_room(char *str, int type)
+t_room					*set_room(char *str, int type)
 {
-	t_room			*room;
-	char			**split;
+	t_room				*room;
+	char				**split;
 
 	room = ft_malloc(sizeof(t_room));
 	split = ft_strsplit(str, ' ');
