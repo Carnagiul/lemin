@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/18 20:32:05 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/10 14:52:17 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/18 22:14:16 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ typedef struct				s_listroom
 	struct s_listroom		*end;
 	struct s_listroom		*start;
 }							t_listroom;
-
 
 typedef struct				s_lem
 {
