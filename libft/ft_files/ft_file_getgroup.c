@@ -15,4 +15,3 @@ char				*ft_file_getgroup(struct stat stat)
 		return (ret);
 	return (ft_strdup("none"));
 }
-
