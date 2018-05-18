@@ -13,15 +13,16 @@
 #ifndef FT_FILES_H
 # define FT_FILES_H
 
-typedef struct	passwd	t_pswd;
-typedef struct	group	t_group;
-typedef struct	stat	t_stat;
+typedef struct passwd	t_pswd;
+typedef struct group	t_group;
+typedef struct stat	t_stat;
 
 int						ft_files_count_dir(char *path);
 int						ft_files_count_dir_wa(char *path);
 int						ft_files_count_files(char *path);
 int						ft_files_count_files_wa(char *path);
-int						ft_files_count_files_contains_str(char *path, char *extension);
+int						ft_files_count_files_contains_str(char *path,
+						char *extension);
 char					*ft_file_getgroup(struct stat stat);
 char					*ft_file_chmod(struct stat stat);
 void					ft_file_gettime(time_t timestamp);
