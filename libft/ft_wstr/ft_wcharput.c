@@ -2,7 +2,8 @@
 
 int			ft_unix_string_display_ii(int wc)
 {
-	int		c, d;
+	int		c
+	int		dd;
 
 	c = (wc >> 6) + 0XC0;
 	d = (wc & 0x3F) + 0X80;
@@ -13,9 +14,9 @@ int			ft_unix_string_display_ii(int wc)
 
 int			ft_unix_string_display_iii(int wc)
 {
-	int	b;
-	int	c;
-	int	d;
+	int		b;
+	int		c;
+	int		d;
 
 	b = (wc >> 12) + 0XE0;
 	c = ((wc >> 6) & 0x3F) + 0X80;
@@ -28,10 +29,10 @@ int			ft_unix_string_display_iii(int wc)
 
 int			ft_unix_string_display_iv(int wc)
 {
-	int	a;
-	int	b;
-	int	c;
-	int	d;
+	int		a;
+	int		b;
+	int		c;
+	int		d;
 
 	a = (wc >> 18) + 0xF0;
 	b = ((wc >> 12) & 0x3F) + 0X80;
