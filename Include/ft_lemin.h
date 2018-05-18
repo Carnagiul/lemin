@@ -64,5 +64,6 @@ void						display_path(t_tube *tb);
 void						set_dist_room(t_room *room, int dist);
 void						add_tube(char *str, t_listroom **tmp);
 void						set_dist(t_listroom **tmp);
+void						read_entry(t_lem *lem);
 
 #endif
