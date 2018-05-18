@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tube.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/18 22:15:17 by piquerue          #+#    #+#             */
+/*   Updated: 2018/05/18 22:15:44 by piquerue         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void					add_tube(char *str, t_listroom **tmp)
@@ -35,7 +47,7 @@ void					tube_set(t_tube *tube, t_room *room)
 		while (tmp->next)
 		{
 			if (tmp->room == tube->room)
-				exit (0);
+				exit(0);
 			tmp = tmp->next;
 		}
 		tmp->next = tube;
