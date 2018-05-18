@@ -1,7 +1,6 @@
 #include "libft.h"
 #include "ft_wstr_mappeur.h"
 
-
 char		*ft_unix_string_get_name(int wc)
 {
 	int		j;
@@ -40,6 +39,7 @@ void		ft_unix_string_display_put_struct(t_unix_char_limit l)
 	int		max;
 	min = l.min;
 	max = l.max;
+
 	while (min < max)
 	{
 		if (ft_unix_char_is_display_ii(min) == 1)
@@ -60,8 +60,8 @@ void		ft_unix_string_display_put(void)
 	int		max;
 
 	j = 0;
-	min  = 0;
-	max  = 0;
+	min = 0;
+	max = 0;
 	while (g_t_global_limit[j].min != -1)
 	{
 		min = g_t_global_limit[j].min;

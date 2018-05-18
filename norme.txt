@@ -11,15 +11,10 @@ Error: 42 header not at top of the file
 Norme: ./lemin/ft_tube.c
 Error: global scope bad aligned
 Error: 42 header not at top of the file
-Error (line 3): bad spacing after add_tube
-Error (line 28): multiple empty lines
-Error (line 29): bad spacing before tube_set
-Error (line 39, col 9): Spacing after call to exit
 
 Norme: ./lemin/room.c
 Error: global scope bad aligned
 Error: 42 header not at top of the file
-Error (line 10): Empty line
 
 Norme: ./libft/ft_files/ft_file_getgroup.c
 Error: 42 header not at top of the file
@@ -48,22 +43,12 @@ Error: 42 header not at top of the file
 
 Norme: ./libft/ft_utils/ft_init_exit_error.c
 Error: 42 header not at top of the file
-Error (line 3): multiple empty lines
-Error (line 4): bad spacing before ft_init_exit_error
 
 Norme: ./libft/ft_utils/ft_malloc.c
 Error: 42 header not at top of the file
 
-Norme: ./libft/ft_wstr/ft_wcharlen.c
-Error: global scope bad aligned
-
 Norme: ./libft/ft_wstr/ft_wchar_type.c
 Error: 42 header not at top of the file
-Error (line 4): multiple empty lines
-Error (line 5): bad spacing before ft_unix_string_get_name
-Error (line 37): declarations must be followed by one empty line in ft_unix_string_display_put_struct
-Error (line 63, col 4): bad spacing
-Error (line 64, col 4): bad spacing
 Error (line 69): line has 111 characters
 Error (line 71): line has 120 characters
 
