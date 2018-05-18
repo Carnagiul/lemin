@@ -13,7 +13,6 @@
 #ifndef FT_WSTR_H
 # define FT_WSTR_H
 
-
 typedef struct	s_unix_char_limit
 {
 	int			min;
