@@ -33,7 +33,7 @@ int			ft_unix_char_is_display_iv(int wc)
 	return (0);
 }
 
-size_t	ft_wcharlen(int wc)
+size_t		ft_wcharlen(int wc)
 {
 	if (wc <= 0x7F)
 		return (1);

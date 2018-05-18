@@ -1,14 +1,13 @@
 Norme: ./lemin/ft_lemin_display.c
 Error: 42 header not at top of the file
-Norme: ./Include/ft_string.h
+
 Norme: ./Include/ft_wstr.h
 Error: global scope bad aligned
 Error (line 16): multiple empty lines
-Norme: ./Include/libft.h
+
 Norme: ./lemin/path.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_delimiteur/ft_char_isalpha_maj.c
-Norme: ./libft/ft_delimiteur/ft_char_iswhitespaces.c
+
 Norme: ./lemin/ft_tube.c
 Error: global scope bad aligned
 Error: 42 header not at top of the file
@@ -16,149 +15,48 @@ Error (line 3): bad spacing after add_tube
 Error (line 28): multiple empty lines
 Error (line 29): bad spacing before tube_set
 Error (line 39, col 9): Spacing after call to exit
-Norme: ./libft/ft_delimiteur/ft_isalpha.c
+
 Norme: ./lemin/room.c
 Error: global scope bad aligned
 Error: 42 header not at top of the file
 Error (line 10): Empty line
-Norme: ./libft/ft_delimiteur/ft_char_isalpha_min.c
-Norme: ./libft/ft_delimiteur/ft_isdigit.c
-Norme: ./libft/ft_display/ft_putchar.c
-Norme: ./libft/ft_delimiteur/ft_isalnum.c
-Norme: ./libft/ft_display/ft_putendl.c
-Norme: ./libft/ft_delimiteur/ft_isascii.c
-Norme: ./libft/ft_display/ft_putnbr.c
-Norme: ./libft/ft_delimiteur/ft_isprint.c
-Norme: ./libft/ft_display/ft_putnstr.c
-Norme: ./libft/ft_display/ft_putchar_fd.c
-Norme: ./libft/ft_display/ft_putendl_fd.c
-Norme: ./libft/ft_display/ft_putstr_fd.c
-Norme: ./libft/ft_display/ft_putnbr_fd.c
+
 Norme: ./libft/ft_files/ft_file_getgroup.c
 Error: 42 header not at top of the file
 Error: file must end with a single empty line
-Norme: ./libft/ft_display/ft_putstr.c
+
 Norme: ./libft/ft_files/ft_file_gettype.c
 Error: 42 header not at top of the file
+
 Norme: ./libft/ft_files/ft_file_chmod.c
 Error: 42 header not at top of the file
+
 Norme: ./libft/ft_files/ft_file_gettime.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_files/ft_files_count_dir.c
+
 Norme: ./libft/ft_files/ft_file_getuser.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_files/ft_files_count_files_contains_str.c
-Norme: ./libft/ft_files/ft_files_count_files.c
+
 Norme: ./libft/ft_files/ft_joinpath.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_gnl/ft_get_content_file.c
-Norme: ./libft/ft_gnl/ft_getextension.c
-Norme: ./libft/ft_list/libft/ft_list_at.c
-Norme: ./libft/ft_list/libft/ft_list_find_last.c
-Norme: ./libft/ft_list/libft/ft_list_push_front.c
-Norme: ./libft/ft_gnl/get_next_line.c
-Norme: ./libft/ft_list/libft/ft_list_find.c
-Norme: ./libft/ft_list/libft/ft_list_push_back.c
-Norme: ./libft/ft_list/libft/ft_list_reverse.c
-Norme: ./libft/ft_list/libft/ft_list_push_param.c
-Norme: ./libft/ft_list/libft/ft_list_size.c
-Norme: ./libft/ft_list/libft/ft_lstadd.c
-Norme: ./libft/ft_list/libft/ft_lstdelone.c
-Norme: ./libft/ft_list/libft/ft_lstmap.c
-Norme: ./libft/ft_list/libft/ft_list_sort.c
-Norme: ./libft/ft_list/t_complex/ft_t_complex_init.c
-Norme: ./libft/ft_list/libft/ft_lstdel.c
-Norme: ./libft/ft_list/t_point/ft_t_point_free.c
-Norme: ./libft/ft_list/libft/ft_lstiter.c
-Norme: ./libft/ft_math/ft_math_div.c
-Norme: ./libft/ft_list/libft/ft_lstnew.c
-Norme: ./libft/ft_math/ft_math_mod.c
-Norme: ./libft/ft_list/t_point/ft_t_point_create.c
-Norme: ./libft/ft_math/ft_math_abs.c
-Norme: ./libft/ft_math/ft_math_factorial.c
-Norme: ./libft/ft_math/ft_pow.c
-Norme: ./libft/ft_math/ft_math_sum.c
-Norme: ./libft/ft_math/ft_power.c
-Norme: ./libft/ft_math/ft_pow_ll.c
-Norme: ./libft/ft_memory/ft_bzero.c
-Norme: ./libft/ft_memory/ft_memalloc.c
-Norme: ./libft/ft_memory/ft_memccpy.c
-Norme: ./libft/ft_memory/ft_memchr.c
-Norme: ./libft/ft_memory/ft_memcmp.c
-Norme: ./libft/ft_memory/ft_memcpy.c
-Norme: ./libft/ft_memory/ft_memdel.c
-Norme: ./libft/ft_memory/ft_memset.c
-Norme: ./libft/ft_memory/ft_memmove.c
-Norme: ./libft/ft_printf/ft_display_next.c
-Norme: ./libft/ft_printf/ft_init_structs.c
-Norme: ./libft/ft_printf/ft_itoa_base_struct_next.c
-Norme: ./libft/ft_printf/ft_display.c
-Norme: ./libft/ft_printf/ft_free_itoa.c
-Norme: ./libft/ft_printf/ft_print_display.c
-Norme: ./libft/ft_printf/ft_printf_color.c
-Norme: ./libft/ft_printf/ft_itoa_base_struct.c
-Norme: ./libft/ft_printf/ft_printf_dollard.c
-Norme: ./libft/ft_printf/ft_parser_checker.c
-Norme: ./libft/ft_printf/ft_printf_help.c
-Norme: ./libft/ft_printf/ft_printf.c
-Norme: ./libft/ft_printf/ft_printf_debeug.c
-Norme: ./libft/ft_printf/ft_printf_double.c
-Norme: ./libft/ft_printf/ft_printf_int.c
-Norme: ./libft/ft_printf/ft_printf_n.c
-Norme: ./libft/ft_printf/ft_printf_itoa.c
-Norme: ./libft/ft_printf/ft_printf_parser.c
-Norme: ./libft/ft_printf/ft_printf_str.c
-Norme: ./libft/ft_printf/ft_printf_uint.c
-Norme: ./libft/ft_printf/ft_printf_p.c
-Norme: ./libft/ft_string/ft_strcat.c
-Norme: ./libft/ft_printf/ft_printf_percent.c
-Norme: ./libft/ft_string/ft_strclr.c
-Norme: ./libft/ft_printf/ft_printf_string.c
-Norme: ./libft/ft_string/ft_strcpy.c
-Norme: ./libft/ft_string/ft_reverse.c
-Norme: ./libft/ft_string/ft_strchr.c
-Norme: ./libft/ft_string/ft_strdup.c
-Norme: ./libft/ft_string/ft_strcmp.c
-Norme: ./libft/ft_string/ft_strdel.c
-Norme: ./libft/ft_string/ft_strequ.c
-Norme: ./libft/ft_string/ft_striter.c
-Norme: ./libft/ft_string/ft_string_capitalize.c
-Norme: ./libft/ft_string/ft_striteri.c
-Norme: ./libft/ft_string/ft_strlcat.c
-Norme: ./libft/ft_string/ft_strjoin.c
-Norme: ./libft/ft_string/ft_strmap.c
-Norme: ./libft/ft_string/ft_strlen.c
-Norme: ./libft/ft_string/ft_strncat.c
-Norme: ./libft/ft_string/ft_strncpy.c
-Norme: ./libft/ft_string/ft_strnew.c
-Norme: ./libft/ft_string/ft_strmapi.c
-Norme: ./libft/ft_string/ft_strncmp.c
-Norme: ./libft/ft_string/ft_strrchr.c
-Norme: ./libft/ft_string/ft_strnequ.c
-Norme: ./libft/ft_string/ft_strnstr.c
-Norme: ./libft/ft_string/ft_strstr.c
-Norme: ./libft/ft_string/ft_strtrim.c
-Norme: ./libft/ft_string/ft_strsplit.c
-Norme: ./libft/ft_string/ft_strsub.c
-Norme: ./libft/ft_utils/ft_atoi_base.c
+
 Norme: ./libft/ft_utils/ft_free_char_ss.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_utils/ft_atoi.c
+
 Norme: ./libft/ft_utils/ft_exit_error.c
 Error: 42 header not at top of the file
+
 Norme: ./libft/ft_utils/ft_init_exit_error.c
 Error: 42 header not at top of the file
 Error (line 3): multiple empty lines
 Error (line 4): bad spacing before ft_init_exit_error
-Norme: ./libft/ft_utils/ft_itoa.c
+
 Norme: ./libft/ft_utils/ft_malloc.c
 Error: 42 header not at top of the file
-Norme: ./libft/ft_utils/ft_toupper.c
+
 Norme: ./libft/ft_wstr/ft_wcharlen.c
 Error: global scope bad aligned
-Norme: ./libft/ft_utils/ft_itoa_base.c
-Norme: ./libft/ft_utils/ft_tolower.c
-Norme: ./libft/ft_wstr/ft_wstrlen.c
+
 Norme: ./libft/ft_wstr/ft_wchar_type.c
 Error: 42 header not at top of the file
 Error (line 4): multiple empty lines
@@ -168,9 +66,11 @@ Error (line 63, col 4): bad spacing
 Error (line 64, col 4): bad spacing
 Error (line 69): line has 111 characters
 Error (line 71): line has 120 characters
+
 Norme: ./libft/ft_wstr/ft_wcharput.c
 Error: 42 header not at top of the file
 Error (line 5): multiple declarations
+
 Norme: ./main.c
 Error: global scope bad aligned
 Error: 6 functions in the file
