@@ -1,36 +1,5 @@
 #include "libft.h"
 
-void                add_room(t_room *room, t_listroom **tmp)
-{
-	t_listroom *list;
-	t_listroom *end;
-
-	list = *tmp;
-	end = malloc(sizeof(t_listroom));
-	end->next = NULL;
-	if (list)
-	{
-		end->start = list;
-		end->room = room;
-		while (list->next)
-		{
-			if (ft_strcmp(list->room->name, end->room->name) == 0)
-				exit(0);
-			if (list->room->x == end->room->x && list->room->y == end->room->y)
-				exit(0);
-			list->end = end;
-			list = list->next;
-		}
-		list->next = end;
-	}
-	else
-	{
-		end->end = NULL;
-		end->room = room;
-		*tmp = end;
-	}
-}
-
 void    set_file(t_lem *lem)
 {
 	int i;
@@ -137,7 +106,6 @@ void move_ants(t_lem *lem)
 			}
 			start = start->next;
 		}
-
 	}
 }
 
@@ -146,7 +114,6 @@ int main(int argc, char **argv)
 	t_lem *lem;
 	char  *ret;
 
-	//ft_unix_string_display_put();
 	ft_init_exit_error();
 	lem = ft_malloc(sizeof(t_lem));
 	lem->rooms = NULL;
