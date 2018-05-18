@@ -3,7 +3,6 @@ Norme: ./Include/ft_display.h
 Norme: ./Include/ft_files.h
 Norme: ./Include/ft_gnl.h
 Norme: ./Include/ft_lemin.h
-Error (line 43): multiple empty lines
 Norme: ./Include/ft_list.h
 Norme: ./Include/ft_math.h
 Norme: ./Include/ft_memory.h
@@ -15,23 +14,14 @@ Norme: ./Include/ft_wstr.h
 Norme: ./Include/ft_wstr_mappeur.h
 Norme: ./Include/libft.h
 Norme: ./lemin/add_room.c
-Error: 42 header not at top of the file
 Norme: ./lemin/ft_lemin_display.c
-Error: 42 header not at top of the file
 Norme: ./lemin/ft_tube.c
-Error: 42 header not at top of the file
-Error (line 38, col 9): Spacing after call to exit
+Norme: ./lemin/move_ants.c
 Norme: ./lemin/path.c
-Error: 42 header not at top of the file
 Norme: ./lemin/read_entry.c
-Error: 42 header not at top of the file
-Error: file must end with a single empty line
 Norme: ./lemin/room.c
-Error: 42 header not at top of the file
 Norme: ./lemin/set_dist.c
-Error: 42 header not at top of the file
-Error (line 10): missing newline after while
-Error (line 10, col 21): no newline before block
+Norme: ./lemin/set_file.c
 Norme: ./libft/ft_delimiteur/ft_char_isalpha_maj.c
 Norme: ./libft/ft_delimiteur/ft_char_isalpha_min.c
 Norme: ./libft/ft_delimiteur/ft_char_iswhitespaces.c
@@ -50,20 +40,14 @@ Norme: ./libft/ft_display/ft_putnstr.c
 Norme: ./libft/ft_display/ft_putstr.c
 Norme: ./libft/ft_display/ft_putstr_fd.c
 Norme: ./libft/ft_files/ft_file_chmod.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_files/ft_file_getgroup.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_files/ft_file_gettime.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_files/ft_file_gettype.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_files/ft_file_getuser.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_files/ft_files_count_dir.c
 Norme: ./libft/ft_files/ft_files_count_files.c
 Norme: ./libft/ft_files/ft_files_count_files_contains_str.c
 Norme: ./libft/ft_files/ft_joinpath.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_gnl/ft_get_content_file.c
 Norme: ./libft/ft_gnl/ft_getextension.c
 Norme: ./libft/ft_gnl/get_next_line.c
@@ -156,46 +140,28 @@ Norme: ./libft/ft_string/ft_strtrim.c
 Norme: ./libft/ft_utils/ft_atoi.c
 Norme: ./libft/ft_utils/ft_atoi_base.c
 Norme: ./libft/ft_utils/ft_exit_error.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_utils/ft_free_char_ss.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_utils/ft_init_exit_error.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_utils/ft_itoa.c
 Norme: ./libft/ft_utils/ft_itoa_base.c
 Norme: ./libft/ft_utils/ft_malloc.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_utils/ft_tolower.c
 Norme: ./libft/ft_utils/ft_toupper.c
 Norme: ./libft/ft_wstr/ft_wchar_type.c
-Error: 42 header not at top of the file
-Error (line 36): declarations must be followed by one empty line in ft_unix_string_display_put_struct
-Error (line 42): Empty line
 Norme: ./libft/ft_wstr/ft_wcharlen.c
 Norme: ./libft/ft_wstr/ft_wcharput.c
-Error: 42 header not at top of the file
 Norme: ./libft/ft_wstr/ft_wstrlen.c
 Norme: ./main.c
 Error: global scope bad aligned
 Error: 42 header not at top of the file
-Error (line 3): declarations in set_file are bad aligned
+Error (line 3): declarations in move_ants are bad aligned
 Error (line 3): Space before function name
-Error (line 3): Space before function name
-Error (line 3): Space before function name
-Error (line 3): Space before function name
-Error (line 3): function set_file has 58 lines
-Error (line 3, col 4): bad spacing
-Error (line 36): line has 84 characters
-Error (line 54): line has 87 characters
-Error (line 65): declarations in move_ants are bad aligned
-Error (line 65): Space before function name
-Error (line 65): function move_ants has 43 lines
-Error (line 69, col 4): bad spacing
-Error (line 70, col 4): bad spacing
-Error (line 97): line has 130 characters
-Error (line 104): line has 83 characters
-Error (line 112): Space before function name
-Error (line 115, col 5): bad spacing
-Error (line 128): C++ comment
-Error (line 129, col 6): space after cast
-Error (line 130, col 6): space after cast
+Error (line 3): function move_ants has 43 lines
+Error (line 7, col 4): bad spacing
+Error (line 8, col 4): bad spacing
+Error (line 35): line has 84 characters
+Error (line 42): line has 85 characters
+Error (line 50): Space before function name
+Error (line 53, col 5): bad spacing
+Error (line 67, col 6): space after cast
+Error (line 68, col 6): space after cast
