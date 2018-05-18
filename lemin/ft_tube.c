@@ -1,11 +1,11 @@
 #include "libft.h"
 
-void				add_tube(char *str, t_listroom **tmp)
+void					add_tube(char *str, t_listroom **tmp)
 {
-	char			**split;
-	t_room			*a;
-	t_room			*b;
-	t_listroom		*lst;
+	char				**split;
+	t_room				*a;
+	t_room				*b;
+	t_listroom			*lst;
 
 	a = NULL;
 	b = NULL;
@@ -25,10 +25,9 @@ void				add_tube(char *str, t_listroom **tmp)
 	insert_tube(a, b);
 }
 
-
-void				tube_set(t_tube *tube, t_room *room)
+void					tube_set(t_tube *tube, t_room *room)
 {
-	t_tube			*tmp;
+	t_tube				*tmp;
 
 	tmp = *(&(room->tube));
 	if (tmp)
