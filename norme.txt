@@ -1,10 +1,6 @@
 Norme: ./lemin/ft_lemin_display.c
 Error: 42 header not at top of the file
 
-Norme: ./Include/ft_wstr.h
-Error: global scope bad aligned
-Error (line 16): multiple empty lines
-
 Norme: ./lemin/path.c
 Error: 42 header not at top of the file
 
