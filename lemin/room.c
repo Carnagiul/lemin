@@ -7,7 +7,6 @@ void					set_dist_room(t_room *room, int dist)
 	tube = *(&(room->tube));
 	while (tube)
 	{
-
 		if (tube->room->dist == 0 && tube->room->end == 0)
 		{
 			tube->room->dist = dist + 1;
