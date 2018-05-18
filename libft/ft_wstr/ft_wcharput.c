@@ -2,8 +2,8 @@
 
 int			ft_unix_string_display_ii(int wc)
 {
-	int		c
-	int		dd;
+	int		c;
+	int		d;
 
 	c = (wc >> 6) + 0XC0;
 	d = (wc & 0x3F) + 0X80;

@@ -66,9 +66,11 @@ void		ft_unix_string_display_put(void)
 	{
 		min = g_t_global_limit[j].min;
 		max = g_t_global_limit[j].max;
-		ft_printf("\n\nAffichage des characteres de %s (%#x >> %#x)\n\n", g_t_global_limit[j].name, min, max);
+		ft_printf("\nAffichage des characteres de %s (%#x >> %#x)\n",
+			g_t_global_limit[j].name, min, max);
 		ft_unix_string_display_put_struct(g_t_global_limit[j]);
-		ft_printf("\n\nFin de l'Affichage des characteres de %s (%#x >> %#x)\n\n", g_t_global_limit[j].name, min, max);
+		ft_printf("\nFin de l'Affichage des characteres de %s (%#x >> %#x)\n",
+			g_t_global_limit[j].name, min, max);
 		j++;
 	}
 }
