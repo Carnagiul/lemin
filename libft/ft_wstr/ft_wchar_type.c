@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_wchar_type.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/18 22:19:09 by piquerue          #+#    #+#             */
+/*   Updated: 2018/05/18 22:20:09 by piquerue         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include "ft_wstr_mappeur.h"
 
@@ -37,9 +49,9 @@ void		ft_unix_string_display_put_struct(t_unix_char_limit l)
 {
 	int		min;
 	int		max;
+
 	min = l.min;
 	max = l.max;
-
 	while (min < max)
 	{
 		if (ft_unix_char_is_display_ii(min) == 1)
