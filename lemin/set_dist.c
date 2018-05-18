@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void                set_dist(t_listroom **tmp)
+void				set_dist(t_listroom **tmp)
 {
 	t_listroom		*lst;
 	t_listroom		*end;
