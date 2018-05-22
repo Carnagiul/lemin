@@ -1,23 +1,33 @@
 #include "libft.h"
 
+static void	managecmd(char **argv, int argc, t_lem *lem)
+{
+	int		i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (ft_strcmp(argv[i], "--show_final_path") == 0)
+			display_path(lem->path);
+		if (ft_strcmp(argv[i], "--show_lemin_data") == 0)
+			display_room_and_tubes(lem);
+		i++;
+	}
+}
+
 int main(int argc, char **argv)
 {
-	t_lem *lem;
-	char  *ret;
+	t_lem	*lem;
 
 	ft_init_exit_error();
 	lem = ft_malloc(sizeof(t_lem));
 	lem->rooms = NULL;
 	lem->atns = 0;
-	if (argc == 1)
-		read_entry(lem);
+	read_entry(lem);
 	set_file(lem);
 	set_dist(&lem->rooms);
-	display_room_and_tubes(lem);
 	lem->path = create_quick_path(get_start(&lem->rooms));
-	display_path(lem->path);
+	managecmd(argv, argc, lem);
 	move_ants(lem);
-	(void) argv;
-	(void) ret;
 	_exit(0);
 }

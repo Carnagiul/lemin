@@ -54,11 +54,13 @@ t_tube				*create_quick_path(t_room *room)
 void				display_path(t_tube *tb)
 {
 	t_tube			*tube;
+	int				id;
 
+	id = 0;
 	tube = *(&(tb));
 	while (tube)
 	{
-		ft_printf("POS : %s\n", tube->room->name);
+		ft_printf("POS %d: %s\n", id++, tube->room->name);
 		tube = tube->next;
 	}
 }
