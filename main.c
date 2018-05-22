@@ -11,6 +11,8 @@ static void	managecmd(char **argv, int argc, t_lem *lem)
 			display_path(lem->path);
 		if (ft_strcmp(argv[i], "--show_lemin_data") == 0)
 			display_room_and_tubes(lem);
+		if (ft_strcmp(argv[i], "--show_lemin_file") == 0)
+			display_lemin_file(lem);
 		i++;
 	}
 }

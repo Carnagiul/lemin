@@ -68,5 +68,6 @@ void						add_room(t_room *room, t_listroom **tmp);
 void						set_file(t_lem *lem);
 void						move_ants(t_lem *lem);
 void						verify_lemin(t_lem *lem);
+void						display_lemin_file(t_lem *lem);
 
 #endif
