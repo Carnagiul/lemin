@@ -12,30 +12,36 @@
 
 #include "libft.h"
 
-static int	move_ants_toggled(t_tube *start)
+static int	move_ants_toggled(t_tube *start, t_tube *tmp, int test)
 {
-	ft_printf("L%d-%s ", start->room->a_id + 1, start->room->name);
+	if (test != 0)
+		ft_printf(" ");
+	ft_printf("L%d-%s", start->room->a_id + 1, tmp->room->name);
 	start->room->a_id = 0;
 	start->room->toggle = 0;
 	return (1);
 }
 
-static int	move_ants_toggled_by_next(t_tube *start)
+static int	move_ants_toggled_by_next(t_tube *start, int test)
 {
+	if (test != 0)
+		ft_printf(" ");
 	start->next->room->toggle = 0;
 	start->room->a_id = start->next->room->a_id;
 	start->next->room->a_id = 0;
 	start->room->toggle = 1;
-	ft_printf("L%d-%s ", start->room->a_id + 1, start->room->name);
+	ft_printf("A%d-%s", start->room->a_id + 1, start->room->name);
 	return (1);
 }
 
-static int	move_ants_toggle_it(t_tube *start, t_lem *lem, int max)
+static int	move_ants_toggle_it(t_tube *start, t_lem *lem, int max, int test)
 {
+	if (test != 0)
+		ft_printf(" ");
 	start->room->a_id = max - lem->atns--;
 	start->room->toggle = 1;
-	ft_printf("L%d-%s\n", start->room->a_id + 1, start->room->name);
-	return (1);
+	ft_printf("E%d-%s\n", start->room->a_id + 1, start->room->name);
+	return (-1);
 }
 
 void		move_ants(t_lem *lem)
@@ -55,15 +61,17 @@ void		move_ants(t_lem *lem)
 		while (start)
 		{
 			if (start->room->toggle != 0)
-				test = move_ants_toggled(start);
+				test = move_ants_toggled(start, tmp, test);
 			if (start->next)
 			{
 				if (start->next->room->toggle == 1)
-					test = move_ants_toggled_by_next(start);
+					test = move_ants_toggled_by_next(start, test);
 				else if (start->next->room->start == 1 && lem->atns > 0)
-					test = move_ants_toggle_it(start, lem, max);
+					test = move_ants_toggle_it(start, lem, max, test);
 			}
 			start = start->next;
 		}
+		if (test > 0)
+			ft_printf("\n");
 	}
 }
