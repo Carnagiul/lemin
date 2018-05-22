@@ -69,6 +69,8 @@ t_room					*set_room(char *str, int type)
 	room = ft_malloc(sizeof(t_room));
 	split = ft_strsplit(str, ' ');
 	room->name = ft_strdup(split[0]);
+	if (split[0][0] == 'L')
+		exit(0);
 	room->x = ft_atoi(split[1]);
 	room->y = ft_atoi(split[2]);
 	room->dist = 0;
