@@ -50,6 +50,8 @@ void					tube_set(t_tube *tube, t_room *room)
 				exit(0);
 			tmp = tmp->next;
 		}
+		if (tmp->room == tube->room)
+			exit(0);
 		tmp->next = tube;
 	}
 	else
