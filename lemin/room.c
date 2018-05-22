@@ -73,6 +73,8 @@ t_room					*set_room(char *str, int type)
 		exit(0);
 	room->x = ft_atoi(split[1]);
 	room->y = ft_atoi(split[2]);
+	if (split[3])
+		exit(0);
 	room->dist = 0;
 	room->toggle = 0;
 	room->tube = NULL;
