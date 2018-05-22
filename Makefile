@@ -25,6 +25,7 @@ T = 0
 	@gcc $(CFLAGS) -I Include/ -o $@ -c $<
 	$(call plus,$(COUNT), 1)
 	@printf "\033[1A\033[KCompiling Source \033[32m%d\033[37m / \033[31m%d\033[37m\n" $(COUNT) $(COUNT_MAX)
+
 $(NAME): check display $(O)
 	@gcc -o $(NAME) $(O)
 	@printf "\033[1A\033[KCompiling Project \033[33m%s\033[37m\n" $(NAME)
@@ -47,7 +48,14 @@ check:
 test:
 	@printf "%d fichier .c trouver" $(COUNT)
 
-.PHONY : all clean fclean re
+music_start:
+	@afplay ./ressources/music/music.mp3 &
+
+music_end:
+	@say -v thomas Fin de la compilation Merci d\'avoir patienter
+	@killall afplay
+
+.PHONY : all clean fclean re test check display
 
 
 
