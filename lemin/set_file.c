@@ -35,6 +35,8 @@ static int			set_file_set_ants(char *cmd, t_lem *lem)
 
 static int			set_file_set_tube(char *l, int tube, t_lem *lem, int type)
 {
+	t_listroom		*room;
+
 	if (type >= 0)
 	{
 		if (tube == 1)
@@ -42,7 +44,16 @@ static int			set_file_set_tube(char *l, int tube, t_lem *lem, int type)
 		else
 			add_room(set_room(l, type), &(lem->rooms));
 		if (type == 2)
-			tube = 1;
+		{
+			room = *(&(lem->rooms));
+			while (room->next)
+			{
+				if (room->room->start == 1)
+					return (1);
+				room = room->next;
+			}
+			tube = (room->room->start == 1) ? 1 : 0;
+		}
 	}
 	return (tube);
 }
@@ -74,7 +85,7 @@ void				set_file(t_lem *lem)
 		{
 			if (done == 0 && type == 0)
 				done = set_file_set_ants(lem->filecontents[i], lem);
-			else if (done == 0 && type == 1)
+			else if (done == 0 && type >= 1)
 				exit(0);
 			else
 				tube = set_file_set_tube(lem->filecontents[i], tube, lem, type);
