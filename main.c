@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 	lem->atns = 0;
 	read_entry(lem);
 	set_file(lem);
+	verify_lemin(lem);
 	set_dist(&lem->rooms);
 	lem->path = create_quick_path(get_start(&lem->rooms));
 	managecmd(argv, argc, lem);

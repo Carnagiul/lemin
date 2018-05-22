@@ -29,4 +29,5 @@ char				*ft_get_content_file(char *file);
 char				*ft_get_content_file_fd(int fd);
 char				*ft_get_extension(char *str);
 
+
 #endif
