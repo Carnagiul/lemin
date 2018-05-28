@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/19 00:05:01 by piquerue          #+#    #+#             */
-/*   Updated: 2016/12/19 00:06:09 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/28 07:40:26 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ int					get_next_line(int fd, char **line);
 char				*ft_get_content_file(char *file);
 char				*ft_get_content_file_fd(int fd);
 char				*ft_get_extension(char *str);
-
 
 #endif

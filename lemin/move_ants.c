@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 01:09:01 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/19 01:09:11 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/28 07:41:39 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static int	move_ants_toggled(t_tube *start, t_tube *tmp, int test)
 	return (1);
 }
 
-static int	move_ants_if_next_exist(t_tube *start, t_lem *lem, int max, int test)
+static int	move_ants_if_next_exist(t_tube *start, t_lem *lem, int max,
+		int test)
 {
 	if (start->next->room->toggle == 1)
 	{

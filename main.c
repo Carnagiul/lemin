@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/28 07:40:08 by piquerue          #+#    #+#             */
+/*   Updated: 2018/05/28 07:40:09 by piquerue         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	managecmd(char **argv, int argc, t_lem *lem)
@@ -17,7 +29,7 @@ static void	managecmd(char **argv, int argc, t_lem *lem)
 	}
 }
 
-int main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_lem	*lem;
 
