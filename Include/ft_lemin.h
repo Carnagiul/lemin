@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/18 20:32:05 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/19 00:55:23 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/29 08:41:17 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ void						set_file(t_lem *lem);
 void						move_ants(t_lem *lem);
 void						verify_lemin(t_lem *lem);
 void						display_lemin_file(t_lem *lem);
+int							is_tube_or_not(char *l);
 
 #endif

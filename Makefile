@@ -6,11 +6,11 @@
 #    By: piquerue <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/02 14:20:07 by piquerue          #+#    #+#              #
-#    Updated: 2018/05/28 07:55:04 by piquerue         ###   ########.fr        #
+#    Updated: 2018/05/29 08:10:14 by piquerue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lem_in
+NAME = lem-in
 
 CFLAGS = -Wall -Werror -Wextra -Ofast -Wunreachable-code
 

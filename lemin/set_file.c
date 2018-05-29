@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 00:50:46 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/19 00:55:46 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/29 08:42:51 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static int			set_file_set_tube(char *l, int tube, t_lem *lem, int type)
 {
 	t_listroom		*room;
 
+	tube = is_tube_or_not(l);
 	if (type >= 0)
 	{
 		if (tube == 1)

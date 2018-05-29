@@ -6,11 +6,26 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 22:15:17 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/18 22:15:44 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/05/29 08:40:44 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int						is_tube_or_not(char *l)
+{
+	int					c;
+
+	c = -1;
+	while (l[++c])
+	{
+		if (l[c] == ' ')
+			return (0);
+		if (l[c] == '-')
+			return (1);
+	}
+	exit(0);
+}
 
 void					add_tube(char *str, t_listroom **tmp)
 {
@@ -23,6 +38,8 @@ void					add_tube(char *str, t_listroom **tmp)
 	b = NULL;
 	lst = *tmp;
 	split = ft_strsplit(str, '-');
+	if (!split || !split[0] || !split[1])
+		exit(0);
 	while (lst)
 	{
 		if (ft_strcmp(lst->room->name, split[0]) == 0)
@@ -32,7 +49,7 @@ void					add_tube(char *str, t_listroom **tmp)
 		lst = lst->next;
 	}
 	if (!a || !b || ft_strcmp(split[0], split[1]) == 0)
-		exit(0);
+		return (free_char_ss(split));
 	free_char_ss(split);
 	insert_tube(a, b);
 }
@@ -47,17 +64,15 @@ void					tube_set(t_tube *tube, t_room *room)
 		while (tmp->next)
 		{
 			if (tmp->room == tube->room)
-				exit(0);
+				return ;
 			tmp = tmp->next;
 		}
 		if (tmp->room == tube->room)
-			exit(0);
+			return ;
 		tmp->next = tube;
 	}
 	else
-	{
 		room->tube = tube;
-	}
 }
 
 void					insert_tube(t_room *a, t_room *b)
