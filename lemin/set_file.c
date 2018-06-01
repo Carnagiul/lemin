@@ -6,19 +6,19 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 00:50:46 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/29 08:42:51 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/06/01 15:48:03 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			set_file_get_command(char *cmd)
+static int			set_file_get_command(char *cmd, int type)
 {
 	if (ft_strcmp(cmd, "##start") == 0)
 		return (1);
 	if (ft_strcmp(cmd, "##end") == 0)
 		return (2);
-	return (0);
+	return (type);
 }
 
 static int			set_file_set_ants(char *cmd, t_lem *lem)
@@ -81,7 +81,7 @@ void				set_file(t_lem *lem)
 		if (ft_strlen(lem->filecontents[i]) == 0)
 			return ;
 		else if (lem->filecontents[i][0] == '#')
-			type = set_file_get_command(lem->filecontents[i]);
+			type = set_file_get_command(lem->filecontents[i], type);
 		else
 		{
 			if (done == 0 && type == 0)
