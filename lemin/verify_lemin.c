@@ -28,7 +28,11 @@ void			verify_lemin(t_lem *lem)
 	while (room)
 	{
 		start += room->room->start;
-		end += room->room->start;
+		if (room->room->tube && room->room->start > 0)
+			exit(1);
+		if (room->room->tube && room->room->end > 0)
+			exit(1);
+		end += room->room->end;
 		room = room->next;
 	}
 	if (start == 0 || end == 0)
