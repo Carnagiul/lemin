@@ -6,7 +6,7 @@
 /*   By: piquerue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 22:15:17 by piquerue          #+#    #+#             */
-/*   Updated: 2018/05/29 08:40:44 by piquerue         ###   ########.fr       */
+/*   Updated: 2018/07/30 00:51:48 by piquerue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,24 @@
 int						is_tube_or_not(char *l)
 {
 	int					c;
+	int					space;
+	int					six;
 
+	space = 0;
+	six = 0;
 	c = -1;
+	printf("%s\n", l);
 	while (l[++c])
 	{
 		if (l[c] == ' ')
-			return (0);
+			space++;
 		if (l[c] == '-')
-			return (1);
+			six++;
 	}
+	if (space == 2)
+		return (0);
+	if (six == 1)
+		return (1);
 	exit(0);
 }
 
@@ -39,6 +48,8 @@ void					add_tube(char *str, t_listroom **tmp)
 	lst = *tmp;
 	split = ft_strsplit(str, '-');
 	if (!split || !split[0] || !split[1])
+		exit(0);
+	if (!lst)
 		exit(0);
 	while (lst)
 	{
